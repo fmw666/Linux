@@ -55,11 +55,11 @@ $(document).ready(function(){
 </head>
 <body data-spy="scroll" data-target="#myScrollspy">
 <div class="container">
-   <div class="jumbotron" style="background-image: url(); background-repeat: no-repeat; background-size: 100% 100%;">
-        <h1><em>计算机网络（第七版）</em></h1>
+   <div class="jumbotron" style="background-image: url(pics/bc.jpg); background-repeat: no-repeat; background-size: 100% 100%;">
+        <h1><em style="color: white;">计算机网络（第七版）</em></h1>
         <blockquote class="blockquote-reverse">
-		  <footer style="font-size: 20px;">作者： <cite title="Source Title">谢希仁</cite></footer>
-		</blockquote>
+	    <footer style="font-size: 20px; color: whitesmoke;">作者： <cite title="Source Title">谢希仁</cite></footer>
+	</blockquote>
     </div>
     
     <div class="row">
@@ -89,7 +89,7 @@ $(document).ready(function(){
 	        🔺<code>互联网服务提供者ISP(Internet Servie Provider)：</code>又称<code>互联网服务提供商</code>，它可以从互联网管理机构申请到很多IP地址，所谓“上网”就是指“（通过某ISP获得的IP地址）接入到互联网”。<br />
             	<img src="pics/1.1-3.png"/>
             	<br />
-		🔺因特网标准制定的四个阶段：<code>因特网草案</code>，<code>建议标准（RFC）</code>，<code>草案标准（RFC）</code>，<code>因特网标准（RFC）</code>
+            	🔺因特网标准制定的四个阶段：<code>因特网草案</code>，<code>建议标准（RFC）</code>，<code>草案标准（RFC）</code>，<code>因特网标准（RFC）</code>
             <h4>1.3 互联网的组成</h4>
             	🔺互联网分为两大块：<code>边缘部分</code>和<code>核心部分</code><br />
             	🔺网络边缘的端系统之间的通信方式通常可划分为两大类：<code>客户-服务器方式（C/S方式）</code>和<code>对等方式（P2P方式）</code>。<br />
@@ -98,27 +98,61 @@ $(document).ready(function(){
             	<img src="pics/1.1-6.png"/>
             	<br />
             	🔺互联网核心部分向网络边缘的大量主机提供连通性的方式有三种：<code>电路交换</code>，<code>报文交换</code>和<code>分组交换</code>。<br />
-            	🔺<br />
-            	<h4>1.4  计算机网络在我国的发展</h4>
+            	🔺<code>电路交换：</code>必须经过“建立连接（占用通信资源）——通话（一直占用通信资源）——释放连接（归还通信资源）”三个步骤的交换方式称为电路交换。通话的两个用户始终占用端到端的通信资源。<br />
+            	<img src="pics/1.1-9.png"/>
+            	<br /><br />
+            	当使用电路交换来传送计算机数据时，其线路的传输效率往往很低。这是因为计算机数据是突发式地出现在传输线路上的，因此线路上真正用来传送数据的时间往往不到10%甚至1%。已被用户占用的通信线路资源在绝大部分时间里都是空闲的。<br />
+            	<img src="pics/1.1-10.png"/>
+            	<br />
+            	🔺<code>报文交换：</code>要发送的整块数据成为一个“报文”。通过路由转发。<br />
+            	🔺<code>分组交换：</code>采用存储转发的方式，把报文划分成一个个更小的等长的数据段。实现分组交换的关键构件是路由器，其任务是转发收到的分组，这是网络核心部分最重要的功能。<br />
+            	<br />通常我们把要发送的整块数据称为一个<code>报文(message)</code>。在每一个数据段前面，加上一些由必要的控制信息组成的<code>首部(header)</code>后，就构成了一个<code>分组(packet)</code>。分组又称为<code>“包”</code>，而分组的首部也可称为<code>“包头”</code>。<br />
+            	<img src="pics/1.1-11.png"/>
+            	<br /><br />
+            	路由器收到一个分组，先暂时存储一下，检查其首部，查找转发表，按照首部中的目的地址，找到合适的接口转发出去，把分组交给下一个路由器。这样一步一步地以<code>存储转发</code>的方式，把分组交付最终的目的主机。<br />
+            	<img src="pics/1.1-12.png"/>
+            	<br />
+            	🔺<code>三种交换方式在数据传送阶段的主要特点：</code><br />
+            	&ensp;&ensp;&ensp;<code>电路交换</code>——整个报文的比特流连续地从源点直达终点，好像在一个管道中传送。<br />
+            	&ensp;&ensp;&ensp;<code>报文交换</code>——整个报文先传送到相邻结点，全部存储下来后查找转发表，转发到下一个结点。<br />
+            	&ensp;&ensp;&ensp;<code>分组交换</code>——单个分组（这只是整个报文的一部分）传送到相邻结点，存储下来后查找转发表，转发到下一结点。<br />
+            	<img src="pics/1.1-13.png"/>
+            	<br />
+            	若要连续传送大量的数据，且其传送时间远大于连接建立时间，则<code>电路交换</code>的传输速率较快。<code>报文交换</code>和<code>分组交换</code>不需要预先分配传输带宽，在传送突发数据时可提高整个网络的信道利用率。由于一个分组的长度往往远小于整个报文的长度，因此<code>分组交换</code>比报文交换的时延小，同时也具有更好的灵活性。<br />
+            <h4>1.4 计算机网络在我国的发展</h4>
             	🔺1994年4月20日我国用64 kbit/s专线正式连入互联网。从此，我国被国际上正式承认为接入互联网的国家。<br />
             	🔺<code>BAT介绍：</code>2000年，李彦宏和徐勇创建了百度网站(Baidu.com)，现在已成为全球最大的中文搜索引擎；1999年，马云创建了阿里巴巴网站(Alibaba.com)，是一个企业对企业的网上贸易市场平台；1998年，马化腾、张志东创立了腾讯公司(Tencent)。<br />
-            	<h4>1.5  计算机网络的类别</h4>
+            <h4>1.5 计算机网络的类别</h4>
             	🔺<code>计算机网络的精确定义并未统一，其较好的定义是：</code>计算机网络主要是由一些通用的、可编程的硬件互连而成的，而这些硬件并非专门用来实现某一特定目的（例如，传送数据或视频信号）。这些可编程的硬件能够用来传送多种不同类型的数据，并能支持广泛的和日益增长的应用。<br />
             	🔺按网络的作用范围可将网络分为四类：<code>广域网 WAN（Wide Area Network）</code>，<code>城域网 MAN（Metropolitan Area Network）</code>，<code>局域网 LAN（Local Area Network）</code>，<code>个人区域网 PAN（Personal Area Network）</code><br />
-            	🔺<code>广域网：</code>作用范围通常为几十到几千公里，因而有时也称为远程网（long haul network）。广域网是互联网的核心部分。<br />
-            	🔺<code>城域网：</code>作用范围一般是一个城市，可跨越几个街区甚至整个城市，其作用距离约为5 ~ 50 km。目前很多城域网采用的是以太网技术。
-            <hr>
-            <h2 id="section-2">物理层</h2>
-            	🔺<br />
-            	🔺<br />
-            	🔺<br />
-            	🔺<br />
-            	🔺<br />
-            	🔺<br />
-            	🔺<br />
-            	🔺<br />
-            	🔺<br />
-            	🔺
+            	&ensp;&ensp;&ensp;<code>广域网：</code>作用范围通常为几十到几千公里，因而有时也称为远程网（long haul network）。广域网是互联网的核心部分。<br />
+            	&ensp;&ensp;&ensp;<code>城域网：</code>作用范围一般是一个城市，可跨越几个街区甚至整个城市，其作用距离约为5 ~ 50 km。目前很多城域网采用的是以太网技术。<br />
+            	&ensp;&ensp;&ensp;<code>局域网：</code>一般用微型计算机或工作站通过高速通信线路相连（速率通常在 10 Mbit/s以上），但地理上则局限在较小的范围（如1km左右）。学校或企业大都拥有许多个互连的局域网（常称为校园网或企业网）。<br />
+            	&ensp;&ensp;&ensp;<code>个人区域网：</code>在个人工作的地方把属于个人使用的电子设备（如便携式电脑等）用无线技术连接起来的网络，因此也常称为无线个人区域网（Wireless PAN），其范围很小，大约在10m左右。<br />
+            	🔺按网络的使用者可将网络分为两类：<code>公用网（public network）</code>和<code>专用网（private network）</code><br />
+            	&ensp;&ensp;&ensp;<code>公用网：</code>指电信公司出资建造的大型网络。<br />
+            	&ensp;&ensp;&ensp;<code>专用网：</code>某个部门为满足本单位的特殊业务工作的需要而建造的网络。这种网络不向本单位以外的人提供服务。<br />
+            <h4>1.6 计算机网络的性能</h4>
+            	🔺计算机网络的性能一般是指它的几个重要的性能指标，主要包括：<br />
+            	&ensp;&ensp;&ensp;<code>1.速率</code>：网络技术中的速率指的是数据的传送速率，它也称为数据率（data rate）或比特率（bit rate）。速率是计算机网络中最重要的一个性能指标。<br />
+            	&ensp;&ensp;&ensp;<code>2.带宽</code>：有两种不同的意义，“带宽”(bandwidth) 本来是指信号具有的频带宽度，其单位是赫（或千赫、兆赫、吉赫等）；在计算机网络中，带宽用来表示网络中某通道传送数据的能力。表示在单位时间内网络中的某信道所能通过的“最高数据率”。单位是 bit/s ，即 “比特每秒”。<br />
+            	&ensp;&ensp;&ensp;在“带宽”的上述两种表述中，前者为<code>频域</code>称谓，而后者为<code>时域</code>称谓，其本质是相同的。也就是说，一条通信链路的“带宽”越宽，其所能传输的“最高数据率”也越高。<br />
+            	&ensp;&ensp;&ensp;<code>3.吞吐量</code>：吞吐量 (throughput) 表示在单位时间内通过某个网络（或信道、接口）的实际的数据量。受网络的带宽或网络的额定速率的限制。<br />  
+            	&ensp;&ensp;&ensp;<code>4.时延</code>：时延 (delay 或 latency) 是指数据（一个报文或分组，甚至比特）从网络（或链路）的一端传送到另一端所需的时间。有时也称为延迟或迟延。网络中的时延是由四个不同的部分组成的：<br />
+            	&ensp;&ensp;&ensp;<code>发送时延</code>（是主机或路由器发送数据帧所需要的时间，也叫传输时延）<br />
+            	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+            	<img src="pics/1.6.1-1.png"/>
+            	<br />
+            	&ensp;&ensp;&ensp;<code>传播时延</code>（是电磁波在信道中传播一定的距离需要花费的时间）<br />
+            	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+            	<img src="pics/1.6.1-2.png"/>
+            	<br />
+            	&ensp;&ensp;&ensp;<code>处理时延</code>（是因为主机或路由器在收到分组时要花费一定的时间进行处理而产生的）<br />
+            	&ensp;&ensp;&ensp;<code>排队时延</code>（是因为分组在经过网络传输时，要经过许多路由器。但分组在进入路由器后要先在输入队列中排队等待处理。在路由器确定了转发接口后，还要在输出队列中排队等待转发而产生的）<br />
+            	&ensp;&ensp;&ensp;<code>5.时延带宽积</code><br />
+            	&ensp;&ensp;&ensp;<code>6.往返时间 RTT</code><br />
+            	&ensp;&ensp;&ensp;<code>7.利用率</code><br />
+            <h4>1.7 计算机网络的体系结构</h4>	
             <hr>
             <h2 id="section-3">数据链路层</h2>
             	🔺<br />
