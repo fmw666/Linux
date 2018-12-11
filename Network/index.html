@@ -160,6 +160,33 @@ $(document).ready(function(){
             	&ensp;&ensp;&ensp;<code>5.可扩展性和可升级性</code><br />
             	&ensp;&ensp;&ensp;<code>6.易于管理和维护</code><br />
             <h4>1.7 计算机网络的体系结构</h4>	
+            	🔺计算机网络是个相当复杂的系统，为解决这些复杂的问题，可以将之<code>“分层”</code>处理。<br />
+            	🔺<code>“分层”</code>可将庞大而复杂的问题，转化为若干较小的局部问题，而这些较小的局部问题就比较易于研究和处理。 <br />
+            	🔺分层的五大好处：<code>1.各层之间是独立的</code>，<code>2.灵活性好</code>，<code>3.结构上可分隔开</code>，<code>4.易于实现和维护</code>，<code>5.能促进标准化工作</code>。<br />
+            	🔺1974 年，美国的 IBM 公司宣布了<code>系统网络体系结构SNA (System Network Architecture)</code>。这个著名的网络标准就是按照分层的方法制定的。<br />
+            	🔺为了使不同体系结构的计算机网络都能互连，国际标准化组织 ISO 于 1977 年成立了专门机构，他们提出了一个试图使各种计算机在世界范围内互连成网的标准框架，即著名的<code>开放系统互连基本参考模型 OSI/RM (Open Systems Interconnection Reference Model)</code>，简称为 <code>OSI</code>。<br />
+            	🔺OSI 只获得了一些理论研究的成果，在市场化方面却失败了。非国际标准 <code>TCP/IP</code>却获得了最广泛的应用。<br />
+            	🔺网络协议的三个组成要素：<code>语法</code>，<code>语义</code>，<code>同步</code>。<br />
+            	🔺协议的体系结构：<code>OSI</code>具有七层协议体系结构，理论比较完整，但它既复杂又不实用。<code>TCP/IP</code>具有四层体系结构，现在得到了非常广泛的应用。何为五层协议的体系结构？是结合了<code>OSI</code>和<code>TCP/IP</code>的优点而采取的，方便学习理解。<br />
+            	<img src="pics/1.1-18.png"/>
+            	<br />
+            	<p>🔺下面自上向下的概述下五层体系结构的作用：<br /></p>
+            	<p>&ensp;&ensp;&ensp;<code>应用层 (application layer)</code>：通过应用进程间的交互来完成特定网络应用。应用层协议定义的是应用进程间通信和交互的规则（进程指主机中正在运行的程序）。应用层交互的数据单元称为<code>报文（message）</code>。<br /></p>
+            	<p>&ensp;&ensp;&ensp;<code>运输层 (transport layer)</code>：向两台主机中进程之间的通信提供通用的数据传输服务。应用层利用这层的服务来传送报文。由于一台主机可同时运行多个进程，因此运输层有复用和分用的功能。复用就是	多个应用进程可以同时使用下面运输层服务，分用是运输层把收到的信息分别交付到上面应用层中的相应进程里。<br /></p>
+            	<p>&ensp;&ensp;&ensp;<code>网络层 (network layer)</code>：负责为分组交换网上的不同主机提供通信服务。在发送数据时，网络层把运输层产生的报文或用户数据报封装成分组或包进行传送。在TCP/IP体系中，网络层使用无连接的<code>网际协议IP（Internet Protocol）</code>，所以分组也叫IP数据报，或简称数据报。<br /></p>
+            	<p>&ensp;&ensp;&ensp;<code>数据链路层 (data link layer)</code>：将网络层交下来的IP数据报<code>组装成帧（framing）</code>，在两个相邻结点间的链路上传送<code>帧（frame）</code>。<br /></p>
+            	<p>&ensp;&ensp;&ensp;<code>物理层 (physical layer)</code>：传送的数据单位是比特。<br /></p>
+            	&ensp;&ensp;&ensp;现在经常提到的TCP/IP并不一定是单指TCP和IP这两个具体的协议，而往往是表示互联网所使用的整个<code>TCP/IP协议族（protocol suite）</code>。<br />
+            	🔺OSI参考模型把对等层次之间传送的数据单位称为该层的<code>协议数据单元PDU（Protocol Data Unit）</code>。这个名词现已被许多非OSI标准采用。<br />
+            	🔺协议和服务的概念：<code>协议是“水平的”</code>，即协议是控制对等实体之间通信的规则。<code>服务是“垂直的”</code>，即服务是由下层向上层通过层间接口提供的。<br />
+            	🔺<code>everthing over IP：</code>TCP/IP协议可以为各式各样的应用提供服务。<br />
+            	🔺<code>IP over everything：</code>允许IP协议在各式各样的网络构成的互联网上运行。<br />
+            	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+            	<img src="pics/1.1-23.png"/>
+            	<br /><br />
+            	🔺IP协议在互联网起着核心作用，从图1-24不难看出。<br />
+            	<img src="pics/1.1-24.png"/>
+            	<br />
             <hr>
 	    <h2 id="section-2">物理层</h2>
 		🔺<br />
