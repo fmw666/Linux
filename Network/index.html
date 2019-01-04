@@ -190,16 +190,65 @@ $(document).ready(function(){
             	<br />
             <hr>
 	    <h2 id="section-2">物理层</h2>
-		🔺<br />
-		🔺<br />
-		🔺<br />
-		🔺<br />
-		🔺<br />
-		🔺<br />
-		🔺<br />
-		🔺<br />
-		🔺<br />
-		🔺
+	    <h4>2.1 物理层的基本概念</h4>	
+            	🔺物理层的主要任务描述为确定于传输媒体的接口有关的一些特性（四大特性）：<br />
+            	&ensp;&ensp;&ensp;<code>机械特性：</code>指明接口所用接线器的形状和尺寸、引脚数目和排列、固定和锁定装置等。<br />
+            	&ensp;&ensp;&ensp;<code>电气特性：</code>指明在接口电缆的各条线上出现的电压的范围。<br />
+            	&ensp;&ensp;&ensp;<code>功能特性：</code>指明某条线上出现的某一电平的电压的意义。<br />
+            	&ensp;&ensp;&ensp;<code>过程特性：</code>指明对于不同功能的各种可能事件的出现顺序。<br />
+            <h4>2.2 数据通信的基础知识</h4>	
+            	🔺一个数据通信系统分为三大部分：<code>源系统</code>（或<code>发送端、发送方</code>）<code>、传输系统</code>（或<code>传输网络</code>）和<code>目的系统</code>（或<code>接收端、接收方</code>）。<br />
+            	🔺<code>消息（message）：</code>通信的目的是传送消息。<br />
+            	🔺<code>数据（data）：</code>是运送消息的实体。<br />
+            	🔺<code>信号（signal）：</code>是数据的电气或电磁的表现。<br />
+            	🔺<code>信道（channel）：</code>一般都是用来表示向某一个方向传送消息的媒体。<br />
+            	<p>🔺从通信的双方信息交互的方式来看，可以有以下三种基本方式：<br /></p>
+            	<p>&ensp;&ensp;&ensp;<code>单向通信（又称为单工通信）：</code>只能有一个方向的通信而没有反方向的交互。无线电广播或有线电广播以及电视广播就属于这种类型。<br /></p>
+            	<p>&ensp;&ensp;&ensp;<code>双向交替通信（又称为半双工通信）：</code>通信的双方都可以发送消息，但不能双方同时发送，也不能同时接收。<br /></p>
+            	<p>&ensp;&ensp;&ensp;<code>双向同时通信（又称为全双工通信）：</code>通信的双方可以同时发送和接收消息。<br /></p>
+            	&ensp;&ensp;&ensp;来自信源的信号常称为<code>基带信号</code>（即基本频带信号）。<br />
+            	&ensp;&ensp;&ensp;经过载波调制后的信号称为<code>带通信号</code>（即仅在一段频率范围内能够通过信道），使用的载波的调制称为<code>带通调制</code>。<br />
+            	🔺<code>奈式准则：</code>在任何信道中，码元传输的速率是有上限的，传输速率超过此上限，就会出现严重的码间串扰的问题，使接收端对码元的判决（即识别）成为不可能。<br />
+            	🔺<code>信噪比</code><br />
+            	&ensp;&ensp;&ensp;信噪比是信号的平均功率和噪声的平均功率之比，常记为 S/N，并用分贝(dB)作为度量单位。即：<br />
+            	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+            	<img src="pics/2.1.png"/>
+            	<br />
+            	🔺<code>香农公式</code><br />
+            	&ensp;&ensp;&ensp;香农公式指出信道的极限信息传输速率C是：<br />
+            	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+            	<img src="2.2.png"/>
+            	<br />
+            	&ensp;&ensp;&ensp;香农公式表明，信道的带宽或信道中的信噪比越大，信息的极限传输速率就越高。<br /><br />
+		🔺对于频带宽度已确定的信道，如果信噪比也不能再提高了，码元传输速率也达到了上限值，可以<code>让每一个码元携带更多比特的信息量</code>来提高信息的传输速率。<br>
+		🔺利用让每一个码元携带更多比特的信息量来提高带宽，具体运算为：<br /><br / >
+		<img src="pics/2.4.png" />
+		<br /> <br />
+            <h4>2.3 物理层下面的传输媒体</h4>
+            	🔺<code>传输媒体</code>也称为传输介质或传输媒介，分为<code>导引型传输媒体</code>和<code>非导引型传输媒体</code>两大类。<br />
+            	🔺三种引导型传输媒体：<br />
+            	&ensp;&ensp;&ensp;<code>1. 双绞线：</code>把两根互相绝缘的铜导线并排放在一起，然后用规则的方法绞合起来就构成了双绞线。<br />
+            	&ensp;&ensp;&ensp;<code>2. 同轴电缆：</code>有很好的抗干扰性，被广泛用于传输较高速率的数据。<br />
+            	&ensp;&ensp;&ensp;<code>3. 光缆：</code>光线可能产生全反射的这种光纤称为多模光纤；光线一直向前传播，不会产生多次反射的光纤称为单模光纤，价格偏高。<br />
+            <h4>2.4 信道复用技术</h4>
+            	🔺五个：<code>频分复用</code>、<code>时分复用</code>、<code>统计时分复用</code>、<code>波分复用</code>、<code>码分复用</code><br />
+            	🔺<code>复用（multiplexing）</code>是通信技术中的基本概念，最基本的复用就是<code>频分复用FDM（Frequency Division Multiplexing）</code>和<code>时分复用TDM（Time Division Multiplexing）</code><br />
+            	🔺<code>频分复用和时分复用</code><br />
+            	&ensp;&ensp;&ensp;频分复用的所有用户在同样的时间占用不同的带宽资源。时分复用则是将时间划分为一段段等长的时分复用帧（TDM）帧。每一个时分复用的用户在每一个TDM帧中占用固定序号的时隙。<br />
+            	<img src="pics/2.3.png"/>
+            	<br />
+            	&ensp;&ensp;&ensp;时分复用中每一个用户所占用的时隙周期性地出现（其周期就是TDM帧的长度）。因此TDM信号也称为等时信号。可以看出，时分复用的所有用户是在不同的时间用同样的频带宽度。<br />
+		🔺<code>统计时分复用</code><br />
+		&ensp;&ensp;&ensp;统计时分复用STDM（Statistic TDM）是一种改进的时分复用，它能明显地提高信道的利用率。<br />
+		🔺<code>波分复用</code><br />
+		&ensp;&ensp;&ensp;波分复用WDM（Wavelength Division Multiplexing）就是光的频分复用。<br />
+		🔺<code>码分复用</code><br />
+		&ensp;&ensp;&ensp;码分复用CDM（Code Division Multiplexing）是另一种共享信道的方法。人们更常用的名词是<code>码分多址CDMA（Code Division Multiple Access）</code>。每一个用户可以在同样的时间使用同样的频带进行通信。<br />
+	    <h4>2.5 数字传输系统</h4>
+		🔺早期的数字传输系统最主要的两个缺点：<code>（1）速率标准不统一</code>，<code>（2）不是同步传输</code>。<br />
+	    <h4>2.6 宽带接入技术</h4>
+		🔺<code>宽带：</code>国联邦通信委员会FCC认为只要双向速率之和超过200 kbit/s就是宽带。<br />
+		🔺非对称数字用户线ADSL技术是用数字技术对现有的模拟电话用户线进行改造。ADSL在用户线的两端各安装一个ADSL调制解调器。这种调制解调器的实现方案有许多种。我国目前采用的方案是<code>离散多音调DMT（Discrete Multi-Tone）</code>调制技术，DMT调制技术采用<code>频分复用</code>的方法。<br />
             <hr>
             <h2 id="section-3">数据链路层</h2>
             	🔺<br />
