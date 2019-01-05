@@ -261,7 +261,7 @@ $(document).ready(function(){
 		<code>2. 透明传输</code><br />
 		&ensp;&ensp;&ensp;不管从键盘上输入什么字符都可以放在这样的帧中传输过去，这样的传输就是透明传输。<br />
 		&ensp;&ensp;&ensp;为了解决透明传输问题，就必须设法使数据中可能出现的控制字符“SOH”和“EOT”在接收端不被解释为控制字符。具体方法是：发送端的数据链路层在数据中出现控制字符前面插入一个转义字符“ESC”。而在接收端的数据链路层在把数据送往网络层之前删除这个插入的转义字符。这种方法称为<code>字节填充（byte stuffing）</code>或<code>字符填充（character stuffing）</code>。<br />
-		<img src="https://github.com/fmw666/Linux/blob/master/Network/pics/3.1.png?raw=true" />
+		<img src="pics/3.1.png" />
 		<br /><br />
 		<code>3. 差错检测</code><br />
 		&ensp;&ensp;&ensp;现实的通信链路都不会是理想的，为了保证数据传输的可靠性，在计算机网络传输数据时，必须采用各种差错检测措施。<br />
@@ -271,15 +271,15 @@ $(document).ready(function(){
 
 	    <h4>3.2 点对点协议PPP</h4>
 		🔺互联网用户通常都要连接到某个ISP才能接入到互联网。<code>点对点协议PPP（Point-to-Point Protocol）</code>就是用户计算机和ISP进行通信时所使用的数据链路层协议。<br />
-		<img src="https://github.com/fmw666/Linux/blob/master/Network/pics/3.2.png?raw=true" />
+		<img src="pics/3.2.png" />
 		<br />
 		🔺<code>主机通过ISP接入国际互联网的原理：</code><br />
-		<img src="https://github.com/fmw666/Linux/blob/master/Network/pics/3.8.png?raw=true" />
+		<img src="pics/3.8.png" />
 		<br />
 	    <h4>3.3 使用广播信道的数据链路层</h4>
 		🔺广播信道可以进行一对多的通信，其中<code>局域网</code>使用的就是广播信道。<br />
 		🔺局域网可按网络拓扑分为下面三类：<br />
-		<img src="https://github.com/fmw666/Linux/blob/master/Network/pics/3.3.png?raw=true" />
+		<img src="pics/3.3.png" />
 		<br />
 		🔺以太网的两个标准：<code>DIX Ethernet V2</code>与<code>IEEE的802.3</code><br />
 		🔺仍在活动的工作组：<code>802.3——以太网</code>、<code>802.11——无线局域网（WIFI）</code>等。<br />
@@ -293,7 +293,7 @@ $(document).ready(function(){
 		&ensp;&ensp;&ensp;<code>“多点接入”</code>就是说明这是总线型网络，许多计算机以多点接入的方式连接在一根总线上。协议的实质是“载波监听”和“碰撞检测”。<br />
 		&ensp;&ensp;&ensp;<code>“载波监听”</code>就是用电子技术检测总线上有没有其他计算机也在发送。载波监听也就是<code>检测信道</code>，不管在发送前，还是在发送中，每个站都必须不停地检测信道。<br />
 		&ensp;&ensp;&ensp;<code>“碰撞检测”</code>就是<code>“边发送边监听”</code>，即适配器边发送数据边检测信道上的信号电压的变化情况，以便判断自己在发送数据时其他站是否也在发送数据。“碰撞检测”也称为<code>“冲突检测”</code>。<br />
-		<img src="https://github.com/fmw666/Linux/blob/master/Network/pics/3.4.png?raw=true" />
+		<img src="pics/3.4.png" />
 		<br />
 		&ensp;&ensp;&ensp;在使用CSMA/CD协议时，一个站不可能同时进行发送和接收（但必须边发送边监听信道）。因此使用CSMA/CD协议的以太网不可能进行全双工通信而只能进行<code>双向交替通信（半双工通信）</code>。<br />
 		🔺CSMA/CD协议的要点归纳：<br />
@@ -302,7 +302,7 @@ $(document).ready(function(){
 		&ensp;&ensp;&ensp;（3）在发送过程中仍不停地检测信道，即网络适配器要<code>边发送边监听</code>。<br />
 		🔺采用星形拓扑的以太网在星形的中心增加了一种可靠性非常高的设备，叫做<code>集线器（hub）</code><br />
 		&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-		<img src="https://github.com/fmw666/Linux/blob/master/Network/pics/3.5.png?raw=true" />
+		<img src="pics/3.5.png" />
 		<br />
 		🔺<code>集线器工作在物理层，不执行任何协议。</code><br />
 		🔺在局域网中，<code>硬件地址</code>又称为<code>物理地址</code>或<code>MAC地址</code><br />
@@ -310,10 +310,10 @@ $(document).ready(function(){
 	    <h4>3.4 扩展的以太网</h4>
 		🔺在<code>物理层</code>扩展以太网<br />
 		&ensp;&ensp;&ensp;扩展主机和集线器之间的距离的一种简单方法就是使用光纤。<br />
-		<img src="https://github.com/fmw666/Linux/blob/master/Network/pics/3.6.png?raw=true" />
+		<img src="pics/3.6.png" />
 		<br />
 		&ensp;&ensp;&ensp;如果使用多个集线器，就可以连接成覆盖更大范围的多级星形结构的以太网。例如一个学院的三个系各有一个 10BASE-T 以太网，可通过一个主干集线器把各系的以太网连接起来，成为一个更大的以太网。<br />
-		<img src="https://github.com/fmw666/Linux/blob/master/Network/pics/3.7.png?raw=true" />
+		<img src="pics/3.7.png" />
 		<br />
 		&ensp;&ensp;&ensp;在三个系的以太网互连起来之前，每一个系的 10BASE-T 以太网是一个独立的<code>碰撞域</code>（collision domain，又称为<code>冲突域</code>），即在任一时刻，在每一个碰撞域中只能有一个站在发送数据。<br />
 		🔺在<code>数据链路层</code>扩展以太网<br />
