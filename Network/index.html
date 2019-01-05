@@ -251,17 +251,78 @@ $(document).ready(function(){
 		🔺非对称数字用户线ADSL技术是用数字技术对现有的模拟电话用户线进行改造。ADSL在用户线的两端各安装一个ADSL调制解调器。这种调制解调器的实现方案有许多种。我国目前采用的方案是<code>离散多音调DMT（Discrete Multi-Tone）</code>调制技术，DMT调制技术采用<code>频分复用</code>的方法。<br />
             <hr>
             <h2 id="section-3">数据链路层</h2>
-            	🔺<br />
-            	🔺<br />
-            	🔺<br />
-            	🔺<br />
-            	🔺<br />
-            	🔺<br />
-            	🔺<br />
-            	🔺<br />
-            	🔺<br />
-            	🔺
-            <hr>
+            	🔺数据链路层使用的信道主要有以下两种类型：<br />
+		&ensp;&ensp;&ensp;<code>（1）点对点信道</code>。这种信道使用一对一的点对点通信方式。<br />
+		&ensp;&ensp;&ensp;<code>（2）广播信道</code>。这种信道使用一对多的广播通信方式，因此过程比较复杂。<br />
+	    <h4>3.1 使用点对点信道的数据链路层</h4>
+		🔺数据链路层协议有许多种，但有三个基本问题则是共同的。这三个基本问题是：<code>封装成帧</code>、<code>透明传输</code>和<code>差错检测</code>。<br />
+		<code>1. 封装成帧</code><br />
+		&ensp;&ensp;&ensp;封装成帧（framing）就是在一段数据的前后分别添加首部和尾部，这样就构成了一个帧。<br />
+		<code>2. 透明传输</code><br />
+		&ensp;&ensp;&ensp;不管从键盘上输入什么字符都可以放在这样的帧中传输过去，这样的传输就是透明传输。<br />
+		&ensp;&ensp;&ensp;为了解决透明传输问题，就必须设法使数据中可能出现的控制字符“SOH”和“EOT”在接收端不被解释为控制字符。具体方法是：发送端的数据链路层在数据中出现控制字符前面插入一个转义字符“ESC”。而在接收端的数据链路层在把数据送往网络层之前删除这个插入的转义字符。这种方法称为<code>字节填充（byte stuffing）</code>或<code>字符填充（character stuffing）</code>。<br />
+		<img src="https://github.com/fmw666/Linux/blob/master/Network/pics/3.1.png?raw=true" />
+		<br /><br />
+		<code>3. 差错检测</code><br />
+		&ensp;&ensp;&ensp;现实的通信链路都不会是理想的，为了保证数据传输的可靠性，在计算机网络传输数据时，必须采用各种差错检测措施。<br />
+		&ensp;&ensp;&ensp;目前在数据链路层广泛使用了<code>循环冗余检验CRC（Cyclic Redundancy Check）</code>的检错技术。其计算原理如下：<br />
+		&ensp;&ensp;&ensp;在发送端，先把数据划分为组，假定每组 k 个比特。现假定待传送的数据 M = 101001（k = 6）。CRC运算就是在数据 M 的后面添加供差错检测用的 n 位<code>冗余码</code>，然后构成一个帧发送出去，一共（k
+		+ n）位。<br />
+
+	    <h4>3.2 点对点协议PPP</h4>
+		🔺互联网用户通常都要连接到某个ISP才能接入到互联网。<code>点对点协议PPP（Point-to-Point Protocol）</code>就是用户计算机和ISP进行通信时所使用的数据链路层协议。<br />
+		<img src="https://github.com/fmw666/Linux/blob/master/Network/pics/3.2.png?raw=true" />
+		<br />
+		🔺<code>主机通过ISP接入国际互联网的原理：</code><br />
+		<img src="https://github.com/fmw666/Linux/blob/master/Network/pics/3.8.png?raw=true" />
+		<br />
+	    <h4>3.3 使用广播信道的数据链路层</h4>
+		🔺广播信道可以进行一对多的通信，其中<code>局域网</code>使用的就是广播信道。<br />
+		🔺局域网可按网络拓扑分为下面三类：<br />
+		<img src="https://github.com/fmw666/Linux/blob/master/Network/pics/3.3.png?raw=true" />
+		<br />
+		🔺以太网的两个标准：<code>DIX Ethernet V2</code>与<code>IEEE的802.3</code><br />
+		🔺仍在活动的工作组：<code>802.3——以太网</code>、<code>802.11——无线局域网（WIFI）</code>等。<br />
+		🔺为了使数据链路层能更好地适应多种局域网标准，IEEE 802委员会就把局域网的数据链路层拆成<code>逻辑链路控制LLC（Logical Link Control）</code>子层和<code>媒体接入控制MAC（Medium Access Control）</code>子层这两个子层。<br />
+		🔺计算机与外界局域网的连接是通过通信<code>适配器（adapter）</code>进行的。（适配器本来是在主机箱内插入的一块网络接口板，这种接口板又称为<code>网络接口卡NIC（Network Interface Card）</code>或简称<code>“网卡”</code>。由于现在计算机主板上都已经嵌入了这种适配器，不再使用单独的网卡了，因此后面均用适配器这个术语）<br />
+		🔺为了通信的方便，<code>以太网</code>采取了以下两种措施：<br />
+		&ensp;&ensp;&ensp;第一，采用较为灵活的<code>无连接</code>的工作方式，即不必先建立连接就可以直接发送数据。适配器对发送的数据帧<code>不进行编号，也不要求对方发回确认</code>。这样可以使以太网工作起来非常简单，而局域网信道质量很好，因通信质量不好产生差错的概率是很小的。因此，<code>以太网提供的服务是尽最大努力的交付，</code>即<code>不可靠的交付</code>。例如，当目的站用CRC查出收到的数据帧有差错，就把帧丢弃，其他什么也不做。<code>对有差错帧是否需要重传则由高层来决定，当以太网并不知道这是重传帧，而是当作新的数据帧来发送。</code><br />
+		&ensp;&ensp;&ensp;总线上<code>在同一时间只能允许一台计算机发送数据</code>，否则各计算机之间就会互相干扰，使得所发送数据被破坏。以太网为协调总线上各计算机的工作所采取的方法是使用协议<code>CSMA/CD</code>，意思是<code>载波监听多点接入/碰撞检测（Carrier Sense Multiple Access with Collision Detection）</code>。<br />
+		&ensp;&ensp;&ensp;第二，以太网发送的数据都使用<code>曼彻斯特（Manchester）编码</code>的信号。<br />
+		🔺CSMA/CD协议的要点：<br />
+		&ensp;&ensp;&ensp;<code>“多点接入”</code>就是说明这是总线型网络，许多计算机以多点接入的方式连接在一根总线上。协议的实质是“载波监听”和“碰撞检测”。<br />
+		&ensp;&ensp;&ensp;<code>“载波监听”</code>就是用电子技术检测总线上有没有其他计算机也在发送。载波监听也就是<code>检测信道</code>，不管在发送前，还是在发送中，每个站都必须不停地检测信道。<br />
+		&ensp;&ensp;&ensp;<code>“碰撞检测”</code>就是<code>“边发送边监听”</code>，即适配器边发送数据边检测信道上的信号电压的变化情况，以便判断自己在发送数据时其他站是否也在发送数据。“碰撞检测”也称为<code>“冲突检测”</code>。<br />
+		<img src="https://github.com/fmw666/Linux/blob/master/Network/pics/3.4.png?raw=true" />
+		<br />
+		&ensp;&ensp;&ensp;在使用CSMA/CD协议时，一个站不可能同时进行发送和接收（但必须边发送边监听信道）。因此使用CSMA/CD协议的以太网不可能进行全双工通信而只能进行<code>双向交替通信（半双工通信）</code>。<br />
+		🔺CSMA/CD协议的要点归纳：<br />
+		&ensp;&ensp;&ensp;（1）准备发送：适配器从网络层获得一个分组，加上以太网的首部和尾部，组成以太网帧，放入适配器的缓存中。但在发送前，必须<code>先检测信道</code>。<br />
+		&ensp;&ensp;&ensp;（2）检测信道：若检测到信道忙，则应不停地检测，一直等待信道转为空闲。若检测到信道空闲，并在96比特时间内信道保持空闲（保证了帧间最小间隔），就发送这个帧。<br />
+		&ensp;&ensp;&ensp;（3）在发送过程中仍不停地检测信道，即网络适配器要<code>边发送边监听</code>。<br />
+		🔺采用星形拓扑的以太网在星形的中心增加了一种可靠性非常高的设备，叫做<code>集线器（hub）</code><br />
+		&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+		<img src="https://github.com/fmw666/Linux/blob/master/Network/pics/3.5.png?raw=true" />
+		<br />
+		🔺<code>集线器工作在物理层，不执行任何协议。</code><br />
+		🔺在局域网中，<code>硬件地址</code>又称为<code>物理地址</code>或<code>MAC地址</code><br />
+		🔺在所有计算机系统设计中，<code>标识系统（identification system）</code>都是一个核心问题。IEEE 802标准为局域网规定了一种48位的全球地址（一般都简称为“地址”），是指局域网上的每一台计算机中<code>固化在适配器的ROM中的地址（网卡序号）</code>。这个“地址”就比如身份证，是唯一的标识，而非真正的地址。<br />
+	    <h4>3.4 扩展的以太网</h4>
+		🔺在<code>物理层</code>扩展以太网<br />
+		&ensp;&ensp;&ensp;扩展主机和集线器之间的距离的一种简单方法就是使用光纤。<br />
+		<img src="https://github.com/fmw666/Linux/blob/master/Network/pics/3.6.png?raw=true" />
+		<br />
+		&ensp;&ensp;&ensp;如果使用多个集线器，就可以连接成覆盖更大范围的多级星形结构的以太网。例如一个学院的三个系各有一个 10BASE-T 以太网，可通过一个主干集线器把各系的以太网连接起来，成为一个更大的以太网。<br />
+		<img src="https://github.com/fmw666/Linux/blob/master/Network/pics/3.7.png?raw=true" />
+		<br />
+		&ensp;&ensp;&ensp;在三个系的以太网互连起来之前，每一个系的 10BASE-T 以太网是一个独立的<code>碰撞域</code>（collision domain，又称为<code>冲突域</code>），即在任一时刻，在每一个碰撞域中只能有一个站在发送数据。<br />
+		🔺在<code>数据链路层</code>扩展以太网<br />
+		&ensp;&ensp;&ensp;扩展以太网更常用的方法是在数据链路层进行。最初人们使用的是<code>网桥（bridge）</code>，对收到的帧根据其MAC帧的目的地址进行<code>转发</code>和<code>过滤</code>。<br />
+		&ensp;&ensp;&ensp;1990年问世的<code>交换式集线器（switching hub）</code>很快就淘汰了网桥。交换式集线器常称为以太网<code>交换机（switch）</code>或<code>第二层交换机（L2 switch）</code>，强调这种交换机<code>工作在数据链路层</code>。<br />
+	    <h4>3.5 高速以太网</h4>
+		🔺10吉比特以太网（10GE）只工作在<code>全双工方式</code>，因此不存在争用问题，当然也<code>不使用CSMA/CD协议</code>。<br />
+		🔺网络运营商要利用<code>以太网接入到互联网</code>，就必须解决在地址字段部分没有用户名字段，也没有让用户输入密码来鉴别用户身份的过程这个问题。方法就是把数据链路层的两个成功的协议结合起来，即把 PPP 协议中的 PPP帧再封装到以太网中来传输。这就是1999年公布的<code>PPPoE（PPP over Ethernet）</code>，意思是“在以太网上运行PPP”。<br />
+	    <hr>
             <h2 id="section-4">网络层</h2>
             	<h4>4.1 网络层提供的两种服务</h4>
             	🔺网络层为接在网络上的主机所提供的服务分为两大类：<code>无连接的网络服务（数据报服务）</code>和<code>面向连接的网络服务（虚电路VC服务）</code>。<br />
