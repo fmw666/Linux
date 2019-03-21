@@ -12,11 +12,13 @@
 （之前在实验室沉重的台式机上安装过双系统的我，看起来一点也不慌）但是由于不熟练而且以防弄崩我唯一一台珍贵的笔记本，我还是选择了“步步百度”策略。
 
 > 安装 Win10 和 Ubuntu 双系统的教程大家自行百度吧，网上蛮多资源的，我就不单独写了。
+
 <br>
 <div align="center">
     <img src="https://github.com/fmw666/my-image-file/blob/master/images/anime/bluegirl2.jpg" width="100";>
 </div>
 <br>
+
 ***ps:安装过程中如果卡在了开始界面以及启动过程中卡在开始界面解决方案：**<br>
 &emsp;&emsp;解决安装过程中卡住→[https://blog.csdn.net/Dod_Jdi/article/details/78635126](https://blog.csdn.net/Dod_Jdi/article/details/78635126)<br>
 &emsp;&emsp;解决登录过程中卡住→[https://blog.csdn.net/css33/article/details/80037367](https://blog.csdn.net/css33/article/details/80037367)*
