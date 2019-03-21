@@ -1,4 +1,4 @@
-> <h3><a href="welcome">《Ubuntu，从入坑到真香》</a></h3>
+> <h3><a href="#welcome">《Ubuntu，从入坑到真香》</a></h3>
 
 .<br>.<br>.<br>.<br>.<br>
 
