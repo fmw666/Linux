@@ -14,7 +14,7 @@
 > 安装 Win10 和 Ubuntu 双系统的教程大家自行百度吧，网上蛮多资源的，我就不单独写了。
 <br>
 <div align="center">
-    <img src="https://github.com/fmw666/my-image-file/blob/master/images/anime/bluegirl2.jpg" width="50";>
+    <img src="https://github.com/fmw666/my-image-file/blob/master/images/anime/bluegirl2.jpg" width="100";>
 </div>
 <br>
 ***ps:安装过程中如果卡在了开始界面以及启动过程中卡在开始界面解决方案：**<br>
