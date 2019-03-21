@@ -70,7 +70,7 @@
 
 <br>
 <div align="center">
-    <img src="https://github.com/fmw666/Linux/blob/master/Ubuntu-18.04.2-LTS/imgs/163music.png" width="800";>
+    <img src="https://github.com/fmw666/Linux/blob/master/Ubuntu-18.04.2-LTS/imgs/163music.png" width="1000";>
 </div>
 <br>
 
@@ -80,7 +80,7 @@
 
 <br>
 <div align="center">
-    <img src="https://github.com/fmw666/Linux/blob/master/Ubuntu-18.04.2-LTS/imgs/saolei.png" width="600";>
+    <img src="https://github.com/fmw666/Linux/blob/master/Ubuntu-18.04.2-LTS/imgs/saolei.png" width="1000";>
 </div>
 <br>
 
