@@ -25,7 +25,7 @@
 
 <br>
 <div align="center">
-    <img src="https://github.com/fmw666/Linux/blob/master/Ubuntu-18.04.2-LTS/imgs/ubuntu%E7%BB%8F%E5%85%B8%E6%A1%8C%E9%9D%A2.jpg" width="800";>
+    <img src="https://github.com/fmw666/Linux/blob/master/Ubuntu-18.04.2-LTS/imgs/ubuntu%E7%BB%8F%E5%85%B8%E6%A1%8C%E9%9D%A2.jpg" width="1000";>
 </div>
 <br>
 
@@ -35,7 +35,7 @@
 
 <br>
 <div align="center">
-    <img src="https://github.com/fmw666/Linux/blob/master/Ubuntu-18.04.2-LTS/imgs/ubuntu%E4%B8%BB%E9%A2%98%E6%A1%8C%E9%9D%A2.png" width="800";>
+    <img src="https://github.com/fmw666/Linux/blob/master/Ubuntu-18.04.2-LTS/imgs/ubuntu%E4%B8%BB%E9%A2%98%E6%A1%8C%E9%9D%A2.png" width="1000";>
 </div>
 <br>
 
@@ -70,7 +70,7 @@
 
 <br>
 <div align="center">
-    <img src="https://github.com/fmw666/Linux/blob/master/Ubuntu-18.04.2-LTS/imgs/163music.png" width="500";>
+    <img src="https://github.com/fmw666/Linux/blob/master/Ubuntu-18.04.2-LTS/imgs/163music.png" width="800";>
 </div>
 <br>
 
@@ -80,7 +80,7 @@
 
 <br>
 <div align="center">
-    <img src="https://github.com/fmw666/Linux/blob/master/Ubuntu-18.04.2-LTS/imgs/saolei.png" width="400";>
+    <img src="https://github.com/fmw666/Linux/blob/master/Ubuntu-18.04.2-LTS/imgs/saolei.png" width="600";>
 </div>
 <br>
 
@@ -88,7 +88,7 @@
 
 <br>
 <div align="center">
-    <img src="https://github.com/fmw666/Linux/blob/master/Ubuntu-18.04.2-LTS/imgs/ide.png" width="200";>
+    <img src="https://github.com/fmw666/Linux/blob/master/Ubuntu-18.04.2-LTS/imgs/ide.png" width="300";>
 </div>
 <br>
 
