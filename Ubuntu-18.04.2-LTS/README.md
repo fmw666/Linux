@@ -2,18 +2,18 @@
 
 .<br>.<br>.<br>.<br>.<br>
 
-&emsp;&emsp;“我是很犹豫的，所以决定从双系统入手吧，至少用不惯我还能舍弃掉。”
+“我是很犹豫的，所以决定从双系统入手吧，至少用不惯我还能舍弃掉。”
 
-&emsp;&emsp;所以，Windows分区，Ubuntu18.04 操作系统下载，制作U盘启动盘，开干......
+所以，Windows分区，Ubuntu18.04 操作系统下载，制作U盘启动盘，开干......
 
 .<br>.<br>.<br>
 
 
-&emsp;&emsp;（之前在实验室沉重的台式机上安装过双系统的我，看起来一点也不慌）但是由于不熟练而且以防弄崩我唯一一台珍贵的笔记本，我还是选择了“步步百度”策略。
+（之前在实验室沉重的台式机上安装过双系统的我，看起来一点也不慌）但是由于不熟练而且以防弄崩我唯一一台珍贵的笔记本，我还是选择了“步步百度”策略。
 
-&emsp;&emsp; > 安装 Win10 和 Ubuntu 双系统的教程大家自行百度吧，网上蛮多资源的，我就不单独写了。
+> 安装 Win10 和 Ubuntu 双系统的教程大家自行百度吧，网上蛮多资源的，我就不单独写了。
 
-&emsp;&emsp; ***ps:安装过程中如果卡在了开始界面以及启动过程中卡在开始界面解决方案：**<br>
+***ps:安装过程中如果卡在了开始界面以及启动过程中卡在开始界面解决方案：**<br>
 &emsp;&emsp;解决安装过程中卡住→[https://blog.csdn.net/Dod_Jdi/article/details/78635126](https://blog.csdn.net/Dod_Jdi/article/details/78635126)<br>
 &emsp;&emsp;解决登录过程中卡住→[https://blog.csdn.net/css33/article/details/80037367](https://blog.csdn.net/css33/article/details/80037367)*
 
