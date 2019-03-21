@@ -23,6 +23,12 @@
 &emsp;&emsp;解决安装过程中卡住→[https://blog.csdn.net/Dod_Jdi/article/details/78635126](https://blog.csdn.net/Dod_Jdi/article/details/78635126)<br>
 &emsp;&emsp;解决登录过程中卡住→[https://blog.csdn.net/css33/article/details/80037367](https://blog.csdn.net/css33/article/details/80037367)*
 
+<br>
+<div align="center">
+    <img src="https://github.com/fmw666/my-image-file/blob/master/images/anime/bluegirl1.jpg" width="100";>
+</div>
+<br>
+
 但是这个界面也太丑了吧？！别慌，找到网上一篇教程，美化主题（mac os主题），[戳我戳我查看](https://www.cnblogs.com/feipeng8848/p/8970556.html)。
 
 （现在日常除了敲代码就是想办法各种美化主题，害羞）
@@ -32,6 +38,12 @@
 嗯哼？
 
 查查知乎吧，[Linux玩家必备：Ubuntu完全配置指南](https://zhuanlan.zhihu.com/p/56253982)，这篇文章不错，赞了赞了。
+
+<br>
+<div align="center">
+    <img src="https://github.com/fmw666/my-image-file/blob/master/images/anime/bluegirl4.jpg" width="100";>
+</div>
+<br>
 
 现在 Tim 也有了，WeChat 也有了，可以聊天了呢～好开心。剩下的娱乐呢？
 
@@ -47,6 +59,12 @@
 对了，本人不打游戏，所以...你们懂得。
 
 唯一的消遣，可能就是系统自带的 扫雷 了吧，2333，真好玩。
+
+<br>
+<div align="center">
+    <img src="https://github.com/fmw666/my-image-file/blob/master/images/anime/bluegirl6.jpg" width="100";>
+</div>
+<br>
 
 由于我主要偏 [python](#welcome) 和 [java](#welcome) 这两门语言学习，所以 [JetBrains Toolbox](#welcome) 里 [Pycharm](#welcome) 下载，[IDEA](#welcome) 下载，emmm，之前 Win10 里爱用的 [VS code](#welcome) 官网里下载，解决。编程语言的安装和配置也难不倒坚强的我。所以，现在就算是基本完成了吧，23333，两个字，舒服。
 
