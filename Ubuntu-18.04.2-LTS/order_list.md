@@ -3,6 +3,11 @@
 sudo netease-cloud-music&
 ```
 
+#### 关闭网易云音乐
+```shell
+sudo killall -9 netease-cloud-music
+```
+
 #### 删除文件
 ```shell
 sudo rm -rf 文件名
