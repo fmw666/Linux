@@ -1,0 +1,14 @@
+#### 打开网易云音乐
+```shell
+sudo netease-cloud-music &
+```
+
+#### 删除文件
+```shell
+sudo rm -rf 文件名
+```
+
+#### 打开SQLite图形化工具
+```shell
+sqlitebrowser
+```
