@@ -12,3 +12,8 @@ sudo rm -rf 文件名
 ```shell
 sqlitebrowser
 ```
+
+#### 打开系统监控器
+```shell
+gnome-system-monitor
+```
