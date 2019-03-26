@@ -23,4 +23,13 @@ sqlitebrowser
 gnome-system-monitor
 ```
 
+#### 打开MongoDB
+```shell
+sudo service mongod start
+```
+
+#### 关闭MongoDB
+```shell
+sudo service mongod stop
+```
 待更ing
