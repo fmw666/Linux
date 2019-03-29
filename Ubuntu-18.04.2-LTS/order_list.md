@@ -13,6 +13,11 @@ sudo killall -9 netease-cloud-music
 sudo rm -rf 文件名
 ```
 
+#### 复制文件
+```shell
+sudo cp -r 该路径下的文件名 目的路径
+```
+
 #### 打开SQLite图形化工具
 ```shell
 sqlitebrowser
