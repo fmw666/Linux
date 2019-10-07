@@ -1,7 +1,7 @@
 ## 「 Shell 操作 」
 
 <div align="right">
-    <a href="https://github.com/fmw666/Linux">返回目录导航 ↩</a>
+    <a href="https://github.com/fmw666/Linux#-目录导航">返回目录导航 ↩</a>
 </div>
 
 + Linux 登陆后现实命令提示符，等待用户输入命令
