@@ -6,6 +6,8 @@
 
 + ***[Linux 说明](#-linux-说明)***
 
+> 话说你们的虚拟机出毛病可以 win+R -> msconfig -> 服务 -> 隐藏所有 Microsoft 服务 -> 全部禁用 -> 确定 -> 重启 -> 管理员模式打开 cmd -> netsh winsock reset -> win+R -> msconfig -> 服务 -> 隐藏所有 Microsoft 服务 -> 全部启用 -> 确定 -> 重启
+
 <div align="center">
     <img src="https://github.com/fmw666/my-image-file/blob/master/images/cute/small-cute-8.jpg" width=100>
 </div>
