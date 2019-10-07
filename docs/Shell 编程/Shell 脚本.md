@@ -1,7 +1,7 @@
 ## 「 Shell 脚本 」
 
 <div align="right">
-    <a href="https://github.com/fmw666/Linux">返回目录导航 ↩</a>
+    <a href="https://github.com/fmw666/Linux#-目录导航">返回目录导航 ↩</a>
 </div>
 
 <br>
