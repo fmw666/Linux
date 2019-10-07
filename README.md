@@ -1,4 +1,4 @@
-# Linux
+# 「Linux」
 
 > **💡 Linux 操作系统指导手册**
 
@@ -7,7 +7,7 @@
 + ***[Linux 说明](#-linux-说明)***
 
 <div align="center">
-    <img src="https://github.com/fmw666/my-image-file/blob/master/images/cute/small-cute-8.jpg" width=200>
+    <img src="https://github.com/fmw666/my-image-file/blob/master/images/cute/small-cute-8.jpg" width=100>
 </div>
 
 ## 📚 目录导航
