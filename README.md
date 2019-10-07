@@ -47,7 +47,7 @@
     + [Shell 函数]()
 
 <div align="right">
-    <a href="#linux">back to top ⤴</a>
+    <a href="#-linux-">back to top ⤴</a>
 </div>
 
 ## ⭐ Linux 说明
@@ -129,7 +129,7 @@
     + 支持多种体系结构：X86、ARM、MIPS 等。
 
 <div align="right">
-    <a href="#linux">back to top ⤴</a>
+    <a href="#-linux-">back to top ⤴</a>
 </div>
 
 <div align="center">
