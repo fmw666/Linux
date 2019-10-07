@@ -4,6 +4,8 @@
     <a href="https://github.com/fmw666/Linux">返回目录导航 ↩</a>
 </div>
 
+<br>
+
 &emsp;&emsp;**定义：** 用普通的文本文件存储一系列等待以后执行的命令，称为脚本（script）。系统管理员经常利用脚本自动执行重复性管理工作。
 
 一个 Shell 脚本可以包含：
