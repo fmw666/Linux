@@ -5,7 +5,7 @@
 + 起源：[Linus Torvalds](#welcome)，芬兰赫尔辛基大学学生
 
     <div align="center">
-        <img src="pics/linus.jpg" width=200>
+        <img src="pics/linus.png" width=200>
     </div>
 
 + 可在 GNU 公共许可权限下免费获得。
