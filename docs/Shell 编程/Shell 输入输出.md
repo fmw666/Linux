@@ -1,7 +1,7 @@
 ## 「 Shell 输入输出 」
 
 <div align="right">
-    <a href="https://github.com/fmw666/Linux">返回目录导航 ↩</a>
+    <a href="https://github.com/fmw666/Linux#-目录导航">返回目录导航 ↩</a>
 </div>
 
 + **[标准输入/输出](#-标准输入输出)**
