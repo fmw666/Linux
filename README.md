@@ -1,11 +1,55 @@
 # Linux
 
+> **💡 Linux 操作系统指导手册**
+
++ ***[目录导航](-目录导航)***
+
++ ***[Linux 说明](-linux-说明)***
+
+## 📚 目录导航
+
+1. **[Shell 基础]()**
+
+1. **[Linux 命令及常用命令]()**
+
+1. **[Vim 的基本操作]()**
+
+1. **[Linux 命令及常用命令]()**
+
+1. **[Shell 编程]()**
+
+    + [Shell 操作]()
+
+    + [元字符]()
+
+    + [Shell 输入输出]()
+
+    + [Shell 脚本]()
+
+    + [Shell 变量]()
+
+    + [Shell 表达式]()
+
+    + [Shell if 结构]()
+
+    + [Shell for 结构]()
+
+    + [Shell while 结构]()
+
+    + [Shell until 结构]()
+
+    + [Shell case 结构]()
+
+    + [Shell 函数]()
+
+## ⭐ Linux 说明
+
 ### 简介
 
 + 起源：[Linus Torvalds](#welcome)，芬兰赫尔辛基大学学生
 
     <div align="center">
-        <img src="pics/linus.jpg" width=200>
+        <img src="pics/linus.jpg" width=150>
     </div>
 
 + 可在 GNU 公共许可权限下免费获得。
