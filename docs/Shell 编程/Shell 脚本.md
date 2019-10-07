@@ -1,4 +1,4 @@
-## 「 Shell 输入输出 」
+## 「 Shell 脚本 」
 
 <div align="right">
     <a href="https://github.com/fmw666/Linux">返回目录导航 ↩</a>
