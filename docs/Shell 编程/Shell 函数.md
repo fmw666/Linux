@@ -133,7 +133,9 @@ foo() {
     echo $sample_text
 }
 echo "script starting"
-echo $sample_text                     foo                                   echo "script ended"
+echo $sample_text
+foo
+echo "script ended"
 echo $sample_text
 ```
 
