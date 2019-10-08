@@ -49,11 +49,11 @@
 
 + 格式：
 
-    ```shell
+    ```bash
     $ functionName
     ```
 
-    ```shell
+    ```bash
     $ functionName 位置参数
     ```
 
