@@ -79,8 +79,8 @@
 
     + 修改 [grub](#welcome) 文件
 
-    ```bash
-    $ sudo vi /etc//default/grub
-    ```
+        ```bash
+        $ sudo vi /etc//default/grub
+        ```
 
     + 添加一行内容：`GRUB_CMDLINE_LINUX="acpi_osi=! acpi_osi='Windows 2009'"`
