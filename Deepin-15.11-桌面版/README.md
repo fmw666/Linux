@@ -12,7 +12,7 @@
 
 + how to show dir structure
 
-    ```shell
+    ```bash
     $ tree
     bash: tree: 未找到命令
     $ sudo apt-get install tree
@@ -31,7 +31,7 @@
 
 + push to Github
 
-    ```shell
+    ```bash
     $ git clone https://github.com/username/repo.git
     bash: git: 未找到命令
     $ apt-get install git
@@ -40,7 +40,7 @@
     $ sudo apt-get install git
     ```
 
-    ```shell
+    ```bash
     $ git add .
     $ git commit -m "commit info"
 
