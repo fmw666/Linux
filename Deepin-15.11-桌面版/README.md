@@ -68,3 +68,19 @@
 
 
 ### Deepin 爬坑
+
++ 开机遇见：[[Firmware Bug]： TSC_DEADLINE disabled due to Errata; please update microcode to version: 0x25 (or later)](#welcome) 解决方法
+
+    + 首先输入 `exit`，然后再输入 `fsck -y /dev/sd*`(如：`fsck -y /dev/sda`)
+
+    + 再输入 `exit` 进入系统，执行更新命令：`sudo apt-get install intel-microcode` 或者：`sudo apt-get install amd64-ucode`
+
++ 关机时屏幕卡住无法顺利完成关机
+
+    + 修改 [grub](#welcome) 文件
+
+    ```bash
+    $ sudo vi /etc//default/grub
+    ```
+
+    + 添加一行内容：`GRUB_CMDLINE_LINUX="acpi_osi=! acpi_osi='Windows 2009'"`
