@@ -10,7 +10,7 @@
 
 ### Linux 装机必备
 
-+ how to show dir tree structure
++ how to show dir tree structure?
 
     ```bash
     $ tree
@@ -29,7 +29,7 @@
     1 directory, 5 files
     ```
 
-+ how to push files to Github
++ how to push files to Github?
 
     ```bash
     $ git clone https://github.com/username/repo.git
@@ -65,7 +65,7 @@
     Password for 'https://fmw666@github.com': 
     ```
 
-
++ how to play with VS Code?
 
 ### Deepin 爬坑
 
