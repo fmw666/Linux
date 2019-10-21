@@ -65,6 +65,32 @@
     Password for 'https://fmw666@github.com': 
     ```
 
+    + 这儿出现一个问题，就是每次 push 都需要一次身份验证，那么如何一次性解决呢？
+
+        + 需要添加本机密钥到 Github，下面是测试以及步骤
+
+        + 运行 `ssh -T git@github.com` 指令会出现如下提示：
+
+            ```bash
+            $ ssh -T git@github.com
+            The authenticity of host 'github.com (52.74.223.119)' can't be established.
+            RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+            Are you sure you want to continue connecting (yes/no)? yes
+            Warning: Permanently added 'github.com,52.74.223.119' (RSA) to the list of known hosts.
+            Permission denied (publickey).
+            ```
+        
+        + 没关系，我们使用 `ssh-keygen -t rsa` 来生成我们的密钥，注意期间是四次回车
+
+        + 生成 id_rsa.pub 文件，我们只需复制里面的内容到 Github 中添加即可
+
+            ```bash
+            $ cat .ssh/id_rsa.pub
+            ```
+
+        + Github 添加密钥网址：[https://github.com/settings/ssh/new](https://github.com/settings/ssh/new)
+
+
 + how to play with VS Code?
 
 ### Deepin 爬坑
