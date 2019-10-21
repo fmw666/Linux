@@ -114,6 +114,70 @@
 
 + how to play with VS Code?
 
+    + 下载我就不用说了吧，下载都下不好，就真太丢了
+
+    + 在终端中使用 `$ code` 打开 VS code
+
+    + 汉化步骤
+
+        1. 选择左侧扩展（Extensions），快捷键 Ctrl+Shift+X
+
+        1. 搜索 Chinese，并选择第一个进行下载，下载完成后软件右下角会提醒你重启此软件
+
+        1. 重启回来后，好像就变成中文的了？好吧，就这样！
+
+        1. 如果不放心，那就快捷键 Ctrl+Shift+P 打开并搜索 `Configure DIsplay Language`，选择我们的 `zh-cn` 就是我们的中文设置。
+
+    + （如果系统自带Python）删除 Python 及其依赖
+
+        1. `sudo apt-get remove --auto-remove python2.*`
+
+        1. `sudo apt-get remove --auto-remove python3.*`
+
+        1. `sudo apt-get purge python2.*`
+
+        1. `sudo apt-get purge python3.*` 
+
+    + 安装 Python3.7
+
+        + 安装/更新依赖
+
+            ```bash
+            $ sudo apt update
+            $ sudo apt install -y make build-essentiallibssl-dev zliblg-dev
+            $ sudo apt install -y libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm
+            $ sudo apt install -y libncurses5-dev libncursesw5-dev xz-utils tk-dev
+            ```
+
+        + 安装 Python 包
+
+            ```bash
+            /Download$ wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz
+            ```
+
+        + 解包
+
+            ```bash
+            $ tar xvf Python-3.7.4.tgz 
+            ```
+        
+        + 执行安装
+
+            ```bash
+            $ cd Python-3.7.4/
+            $ ./configure --enable-optimizations
+            $ sudo make altinstall
+            ```
+
+        + 建立软连接
+
+            ```bash
+            $ sudo ln -s /usr/local/bin/python3 /usr/bin/python3
+            $ sudo ln -s /usr/local/bin/python3 /usr/bin/python
+            $ sudo ln -s /usr/local/bin/pip3 /usr/bin/pip3
+            $ sudo ln -s /usr/local/bin/pip3 /usr/bin/pip
+            ```
+
 ### Deepin 爬坑
 
 + 首先列一个官方社区（深度科技论坛）地址：[https://bbs.deepin.org/](https://bbs.deepin.org/)
