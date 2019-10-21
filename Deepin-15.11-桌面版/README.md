@@ -80,7 +80,7 @@
             Permission denied (publickey).
             ```
         
-        + 没关系，我们使用 `ssh-keygen -t rsa` 来生成我们的密钥，注意期间是四次回车
+        + 没关系，我们使用 `ssh-keygen -t rsa -C "youremail@example.com"` 来生成我们的密钥，注意期间是四次回车
 
         + 生成 id_rsa.pub 文件，我们只需复制里面的内容到 Github 中添加即可
 
