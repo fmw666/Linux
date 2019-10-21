@@ -82,13 +82,34 @@
         
         + 没关系，我们使用 `ssh-keygen -t rsa -C "youremail@example.com"` 来生成我们的密钥，注意期间是四次回车
 
-        + 生成 id_rsa.pub 文件，我们只需复制里面的内容到 Github 中添加即可
+        + 我们可以看下 `.ssh/` 下目录文件：
+
+            ```bash
+            $ ls ~/.ssh/
+            id_rsa  id_rsa.pub  know_hosts
+            ```
+        
+        + 添加密钥 id_rsa：
+
+            ```bash
+            ssh-add id_rsa
+            ```
+
+        + 添加公钥 id_rsa.pub：我们只需复制里面的内容到 Github 中添加即可
 
             ```bash
             $ cat .ssh/id_rsa.pub
             ```
 
         + Github 添加密钥网址：[https://github.com/settings/ssh/new](https://github.com/settings/ssh/new)
+
+        + 最后推荐使用 SSH 进行 clone，如果你当前 repo 已进行 HTTPS 的 clone 方式：
+
+            ```bash
+            git remote set-url origin git+ssh://git@github.com/fmw666/Linux.git
+            ```
+            
+            > 其中 [fmw666](#welcome) 为笔者我的 github 用户名，[Linux](#welcome) 为笔者我的当前克隆仓库。
 
 
 + how to play with VS Code?
