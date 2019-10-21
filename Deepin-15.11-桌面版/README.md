@@ -92,3 +92,5 @@
         ```
 
     + 添加一行内容：`GRUB_CMDLINE_LINUX="acpi_osi=! acpi_osi='Windows 2009'"`
+
+        > 新一点的电脑电脑可以把2009替换为2012或2015，分别代表Win8和Win10 
