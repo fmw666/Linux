@@ -20,9 +20,9 @@
     $ tree
     .
     ├── imgs
-    │   ├── README.md
-    │   ├── ubuntu经典桌面.jpg
-    │   ├── ubuntu主题桌面.png
+    │   ├── README.md
+    │   ├── ubuntu经典桌面.jpg
+    │   ├── ubuntu主题桌面.png
     ├── order_list.md
     └── README.md
 
@@ -68,6 +68,14 @@
 + how to play with VS Code?
 
 ### Deepin 爬坑
+
++ 首先列一个官方社区（深度科技论坛）地址：[https://bbs.deepin.org/](https://bbs.deepin.org/)
+
+    + [深度操作系统新手引导（FAQ）-深度科技论坛](https://bbs.deepin.org/forum.php?mod=viewthread&tid=146921&extra=page%3D1)
+
+    + [Deepin使用心得和一些引用推荐-深度科技论坛](https://bbs.deepin.org/forum.php?mod=viewthread&tid=142227&extra=page%3D1)
+
+    + [15.8问题集中反馈贴-深度科技论坛](https://bbs.deepin.org/forum.php?mod=viewthread&tid=170998)
 
 + 开机遇见：[[Firmware Bug]： TSC_DEADLINE disabled due to Errata; please update microcode to version: 0x25 (or later)](#welcome) 解决方法
 
