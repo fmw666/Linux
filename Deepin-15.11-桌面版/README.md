@@ -1,6 +1,12 @@
 > <h3><a href="#welcome">《Deepin，优雅且危险》</a></h3>
 
-.<br>.<br>.<br>.<br>.<br>
+.<br>.<br>
+
+<div align="right">
+	<img src="pics/deepin-logo.jpg">
+</div>
+
+.<br>.<br>.<br>
 
 #### 目录
 
