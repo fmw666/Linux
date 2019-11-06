@@ -1,8 +1,14 @@
 ### ✨ 极致仿写 Linux终端下 ls命令
 
 <div align="center">
-    <img src="show.png" height="300">
+    <img src="show.jpg" height="300">
 </div>
+
++ **代码的下载**
+
+    + [点我跳转，查看源代码](https://github.com/fmw666/Linux/blob/master/gcc%E7%BC%96%E7%A8%8B/%E6%9E%81%E8%87%B4%E4%BB%BF%E5%86%99ls%E5%91%BD%E4%BB%A4/ls.c)
+
+    + [点我直接开始下载源码](https://github.com/fmw666/Linux/raw/master/gcc%E7%BC%96%E7%A8%8B/%E6%9E%81%E8%87%B4%E4%BB%BF%E5%86%99ls%E5%91%BD%E4%BB%A4/ls.c)
 
 + **代码的运行和使用**
 
