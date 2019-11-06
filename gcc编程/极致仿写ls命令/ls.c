@@ -77,20 +77,20 @@ int set_arg_func(char arg)
 // 返回文件类型
 char get_file_type(mode_t st_mode)
 {
-	if ((st_mode & __S_IFMT) == __S_IFSOCK)
-		return 's';
-	else if ((st_mode & __S_IFMT) == __S_IFLNK)
-		return 'l';
-	else if ((st_mode & __S_IFMT) == __S_IFREG)
-		return '-';
-	else if ((st_mode & __S_IFMT) == __S_IFBLK)
-		return 'b';
-	else if ((st_mode & __S_IFMT) == __S_IFCHR)
-		return 'c';
-	else if ((st_mode & __S_IFMT) == __S_IFIFO)
-		return 'p';
-	else if ((st_mode & __S_IFMT) == __S_IFDIR)
-		return 'd';
+    if ((st_mode & __S_IFMT) == __S_IFSOCK)
+        return 's';
+    else if ((st_mode & __S_IFMT) == __S_IFLNK)
+        return 'l';
+    else if ((st_mode & __S_IFMT) == __S_IFREG)
+        return '-';
+    else if ((st_mode & __S_IFMT) == __S_IFBLK)
+        return 'b';
+    else if ((st_mode & __S_IFMT) == __S_IFCHR)
+        return 'c';
+    else if ((st_mode & __S_IFMT) == __S_IFIFO)
+        return 'p';
+    else if ((st_mode & __S_IFMT) == __S_IFDIR)
+        return 'd';
 }
 
 // 给文件权限变量赋值
@@ -98,13 +98,13 @@ void set_file_permissions(mode_t st_mode, char *file_permissions)
 {
     strcpy(file_permissions, "");
     unsigned int mask = 0700;
-	static char *perm[] = {"---", "--x", "-w-", "-wx", "r--", "r-x", "rw-", "rwx"};
-	for (int i = 3; i; --i)
-	{
+    static char *perm[] = {"---", "--x", "-w-", "-wx", "r--", "r-x", "rw-", "rwx"};
+    for (int i = 3; i; --i)
+    {
         file_permissions = strcat(file_permissions, perm[(st_mode & mask) >> (i - 1) * 3]);
         // printf("%3s", perm[(st_mode & mask) >> (i - 1) * 3]);
-		mask >>= 3;
-	}
+        mask >>= 3;
+    }
 }
 
 /*
