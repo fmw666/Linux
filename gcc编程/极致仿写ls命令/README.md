@@ -1,7 +1,8 @@
 ### ✨ 极致仿写 Linux终端下 ls命令
 
+<br>
 <div align="center">
-    <img src="show.jpg" height="300">
+    <img src="show.jpg" height="600">
 </div>
 
 + **代码的下载**
