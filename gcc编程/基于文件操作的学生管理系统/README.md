@@ -1,7 +1,7 @@
 ### ✨ 基于文件操作的学生管理系统
 
 <div align="center">
-    <img src="show.jpg" height="800">
+    <img src="show.jpg" height="600">
 </div>
 
 + **代码的下载**
