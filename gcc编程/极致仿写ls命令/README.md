@@ -2,7 +2,7 @@
 
 <br>
 <div align="center">
-    <img src="show.jpg" height="500">
+    <img src="show.jpg" height="450">
 </div>
 
 + **代码的下载**
