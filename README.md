@@ -100,7 +100,7 @@
 
 ## ⭐ Linux 说明
 
-### 「 简介 」
+<div align="center"><h3> 「 简介 」 </h3></div>
 
 + **起源：[Linus Torvalds](#welcome)，芬兰赫尔辛基大学学生**
 
@@ -112,7 +112,7 @@
 
 + **符合 POSIX 标准的操作系统。**
 
-### 「 Linux 版本 」
+<div align="center"><h3> 「 Linux 版本 」 </h3></div>
 
 + **核心版本：序号由三部分数字构成**
 
@@ -136,7 +136,7 @@
 
     + SuSELinux&emsp;&emsp;http://www.suse.com
 
-### 「 Linux 特点 」
+<div align="center"><h3> 「 Linux 特点 」 </h3></div>
 
 + **自由软件**
 
