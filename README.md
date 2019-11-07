@@ -102,15 +102,15 @@
 
 <div align="center"><h3> 「 简介 」 </h3></div>
 
-+ **起源：[Linus Torvalds](#welcome)，芬兰赫尔辛基大学学生**
++ **起源：[Linus Torvalds](#welcome)**，芬兰赫尔辛基大学学生
 
     <div align="center">
         <img src="pics/linus.jpg" width=150>
     </div>
 
-+ **可在 GNU 公共许可权限下免费获得。**
++ 可在 **GNU 公共许可** 权限下免费获得。
 
-+ **符合 POSIX 标准的操作系统。**
++ 符合 **POSIX 标准** 的操作系统。
 
 <div align="center"><h3> 「 Linux 版本 」 </h3></div>
 
