@@ -205,6 +205,47 @@
 
 ### 💬 查看文件内容
 
++ **查看文件类型命令——file**
+
+    ```bash
+    $ file index.html
+    index.html: HTML document, ASCII text
+    ```
+
++ **查看整个文件**
+
+    + 使用 `cat` 命令
+        
+        ```bash
+        $ cat [-nbT] [file]
+        ```
+
+    + 使用 `more` 命令
+
+        ```bash
+        $ more [file]
+        ```
+
+    + 使用 `less` 命令
+
+        ```bash
+        $ less [file]
+        ```
+    
++ **查看部分文件**
+
+    + 使用 `tail` 命令
+
+        ```bash
+        $ tail [file]
+        ```
+
+    + 使用 `head` 命令
+
+        ```bash
+        $ head [file]
+        ```
+
 <div align="center">
     - End -
 </div>
