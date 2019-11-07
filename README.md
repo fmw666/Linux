@@ -58,7 +58,39 @@
 
         + [close]()
 
+        + [write]()
+
+        + [read]()
+
+        + [fcntl]()
+
+        + [lseek]()
+
+        + [*stat]()
+
+        + [mmap/munmap]()
+
     + [文件的访问之 ANSI C库函数](docs/)
+
+        + [fopen/fclose/fflush]()
+
+        + [fgetc/getc/getchar]()
+
+        + [fputc/putc/putchar]()
+
+        + [fgets/gets]()
+
+        + [fputs/puts]()
+
+        + [fread/fwrite]()
+
+        + [feof/ferror]()
+
+        + [fseek/ftell]()
+
+        + [printf/fprintf/sprintf]()
+
+        + [scanf/fscanf/sscanf]()
 
     + [C 语言编程实例之 ls 命令的实现](docs/文件处理/C%20语言编程实例之%20ls%20命令的实现.md)
 
