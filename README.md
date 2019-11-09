@@ -20,7 +20,7 @@
 
 1. **[Vim 的基本操作](docs/Vim%20的基本操作.md)**
 
-1. **[Shell 编程](docs/Shell%20编程)**
+1. **[Shell 编程](docs/Shell%20编程#-shell-编程-)**
 
     + [Shell 操作](docs/Shell%20编程/Shell%20操作.md)
 
@@ -54,43 +54,7 @@
 
     + [文件的访问之 系统调用](docs/文件处理/文件的访问.md)
 
-        + [open]()
-
-        + [close]()
-
-        + [write]()
-
-        + [read]()
-
-        + [fcntl]()
-
-        + [lseek]()
-
-        + [*stat]()
-
-        + [mmap/munmap]()
-
     + [文件的访问之 ANSI C库函数](docs/)
-
-        + [fopen/fclose/fflush]()
-
-        + [fgetc/getc/getchar]()
-
-        + [fputc/putc/putchar]()
-
-        + [fgets/gets]()
-
-        + [fputs/puts]()
-
-        + [fread/fwrite]()
-
-        + [feof/ferror]()
-
-        + [fseek/ftell]()
-
-        + [printf/fprintf/sprintf]()
-
-        + [scanf/fscanf/sscanf]()
 
     + [C 语言编程实例之 ls 命令的实现](docs/文件处理/C%20语言编程实例之%20ls%20命令的实现.md)
 
