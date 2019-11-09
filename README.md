@@ -58,7 +58,7 @@
 
     + [C 语言编程实例之 ls 命令的实现](docs/文件处理/C%20语言编程实例之%20ls%20命令的实现.md)
 
-1. **[基于 POSIX 的目录管理](docs/基于%20POSIX%20的目录管理.md))**
+1. **[基于 POSIX 的目录管理](docs/基于%20POSIX%20的目录管理.md)**
 
 <div align="right">
     <a href="#-linux-">back to top ⤴</a>
