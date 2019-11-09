@@ -4,25 +4,25 @@
     <a href="https://github.com/fmw666/Linux#-目录导航">返回目录导航 ↩</a>
 </div>
 
-+ [fopen/fclose/fflush]()
++ **[fopen](#-fopen-函数)** / **[fclose](#-fclose-函数)** / **[fflush](#-fflush-函数)**
 
-+ [fgetc/getc/getchar]()
++ **[fgetc](#-fgetc-函数)** / **[getc](#-getc-函数)** / **[getchar](#-getchar-函数)**
 
-+ [fputc/putc/putchar]()
++ **[fputc](#-fputc-函数)** / **[putc](#-putc-函数)** / **[putchar](#-putchar-函数)**
 
-+ [fgets/gets]()
++ **[fgets](#-fgets-函数)** / **[gets](#-gets-函数)**
 
-+ [fputs/puts]()
++ **[fputs](#-fputs-函数)** / **[puts](#-puts-函数)**
 
-+ [fread/fwrite]()
++ **[fread](#-fread-函数)** / **[fwrite](#-fwrite-函数)**
 
-+ [feof/ferror]()
++ **[feof](#-feof-函数)** / **[ferror](#-ferror-函数)**
 
-+ [fseek/ftell]()
++ **[fseek](#-fseek-函数)** / **[ftell](#-ftell-函数)**
 
-+ [printf/fprintf/sprintf]()
++ **[printf](#-printf-函数)** / **[fprintf](#-fprintf-函数)** / **[sprintf](#-sprintf-函数)**
 
-+ [scanf/fscanf/sscanf]()
++ **[scanf](#-scanf-函数)** / **[fscanf](#-fscanf-函数)** / **[sscanf](#-sscanf-函数)**
 
 ### 💬 fopen 函数
 
@@ -34,7 +34,7 @@
 
 + 函数定义：
 
-    + **FILE* fopen(const char \*filename, const char \*mode)**
+    + **FILE\* fopen(const char \*filename, const char \*mode)**
 
 + 其中：
 
@@ -59,6 +59,24 @@
         |ab+|以读/写方式打开一个二进制文件，允许读或在文件末追加数据|
 
     + **返回值：** 打开成功，返回该文件流指针；不成功，返回 NULL，并设置相应的 error　变量以指明出错的原因
+
+### 💬 fclose 函数
+
++ 函数名：**[fclose](#welcome)**
+
++ 头文件：**[stdio.h](#welcome)**
+
++ 功能：*把缓冲区内最后剩余的数据输出到内核缓冲区，并释放文件指针和有关的缓冲区*
+
++ 函数定义：
+
+    + **int fclose(FILE \*fp)**
+
++ 其中：
+
+    + **fp：** 指向 FILE 对象的指针
+
+    + **返回值：** 如果文件流成功关闭，返回 0；否则返回 EOF(-1)
 
 <div align="center">
     - End -
