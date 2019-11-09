@@ -4,29 +4,14 @@
     <a href="https://github.com/fmw666/Linux#-目录导航">返回目录导航 ↩</a>
 </div>
 
-+ **[Shell 操作](Shell%20操作.md)**
+<br>
+<div align="center">
+    <img src="https://github.com/fmw666/Linux/blob/master/gcc%E7%BC%96%E7%A8%8B/%E6%9E%81%E8%87%B4%E4%BB%BF%E5%86%99ls%E5%91%BD%E4%BB%A4/show.jpg" height="450">
+</div>
 
-+ **[元字符](元字符.md)**
+<br>
 
-+ **[Shell 输入输出](Shell%20输入输出.md)**
-
-+ **[Shell 脚本](Shell%20脚本.md)**
-
-+ **[Shell 变量](Shell%20变量.md)**
-
-+ **[Shell 表达式](Shell%20表达式.md)**
-
-+ **[Shell if 结构](Shell%20if%20结构.md)**
-
-+ **[Shell for 结构](Shell%20for%20结构.md)**
-
-+ **[Shell while 结构](Shell%20while%20结构.md)**
-
-+ **[Shell until 结构](Shell%20until%20结构.md)**
-
-+ **[Shell case 结构](Shell%20case%20结构.md)**
-
-+ **[Shell 函数](Shell%20函数.md)**
+[详情页跳转➡](https://github.com/fmw666/Linux/tree/master/gcc%E7%BC%96%E7%A8%8B/%E6%9E%81%E8%87%B4%E4%BB%BF%E5%86%99ls%E5%91%BD%E4%BB%A4#-%E6%9E%81%E8%87%B4%E4%BB%BF%E5%86%99-linux%E7%BB%88%E7%AB%AF%E4%B8%8B-ls%E5%91%BD%E4%BB%A4)
 
 <div align="center">
     - End -
