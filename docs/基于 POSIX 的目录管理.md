@@ -10,9 +10,9 @@
 
 + **[mkdir](#-mkdir-函数)** / **[rmdir](#-rmdir-函数)**
 
-+ **[chdir 函数](#-chdir-函数)**
++ **[chdir](#-chdir-函数)**
 
-+ **[getcwd 函数](#-getcwd-函数)**
++ **[getcwd](#-getcwd-函数)**
 
 ### 💬 opendir 函数
 
