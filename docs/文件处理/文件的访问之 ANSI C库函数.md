@@ -464,7 +464,7 @@
 
 + 头文件：**[stdio.h](#welcome)**
 
-+ 功能：**
++ 功能：*格式化输出函数，一般用于向标准输出设备按规定格式输出信息*
 
 + 函数定义：
 
@@ -508,23 +508,25 @@
 
 ### 💬 sprintf 函数
 
-+ 函数名：**[fputs]](#welcome)**
++ 函数名：**[sprintf](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
-+ 功能：*向文件流 fp 中写入字符 c，与 fputc 等价*
++ 功能：*将 format 格式化的数据输出到 str 所指向的字符串*
 
 + 函数定义：
 
-    + **int putc(int c, FILE \*fp)**
+    + **int sprintf(char \*str, char \*format, [argument])**
 
 + 其中：
 
-    + **c：** 将要写入的字符量
+    + **str：** 指向一个字符数组的指针，存储了 C 字符串
 
-    + **fp：**　指向 FILE 对象的指针，将要写入的文件流
+    + **format：** 字符串，包含了要被写入到字符串 str 的文本。它可以包含嵌入的 format 标签，format 标签可被随后的附加参数中指定的值替换，并按需求进行格式化
 
-    + **返回值：** 在正常调用情况下，函数返回写入文件的字符的 ASCII 码值，出错时，返回EOF(-1)
+    + **[argument]：** 附加参数列表
+
+    + **返回值：** 如果成功，则返回写入的字符总数（不包括字符串追加在字符串末尾的空字符）；如果失败，则返回一个负数
 
 <div align="right">
     <a href="#-文件的访问之-ansi-c库函数-">返回目录 ⬆</a>
@@ -532,61 +534,65 @@
 
 ### 💬 scanf 函数
 
-+ 函数名：**[fputs]](#welcome)**
++ 函数名：**[scanf](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
-+ 功能：*向文件流 fp 中写入字符 c，与 fputc 等价*
++ 功能：*从标准输入 stdin 读取格式化输入*
 
 + 函数定义：
 
-    + **int putc(int c, FILE \*fp)**
+    + **int scanf(const char \*format, ...)**
 
 + 其中：
 
-    + **c：** 将要写入的字符量
+    + **format：** 字符串，包含了要被写入到字符串 str 的文本。它可以包含嵌入的 format 标签，format 标签可被随后的附加参数中指定的值替换，并按需求进行格式化
 
-    + **fp：**　指向 FILE 对象的指针，将要写入的文件流
-
-    + **返回值：** 在正常调用情况下，函数返回写入文件的字符的 ASCII 码值，出错时，返回EOF(-1)
+    + **返回值：** 如果成功，该函数返回成功匹配和赋值的个数；如果到达文件末尾或发生读错误，则返回 EOF
 
 ### 💬 fscanf 函数
 
-+ 函数名：**[fputs]](#welcome)**
++ 函数名：**[fscanf](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
-+ 功能：*向文件流 fp 中写入字符 c，与 fputc 等价*
++ 功能：*从流 fp 中读取格式化输入，遇到空格和换行时结束（注意空格时也结束）。这与 fgets 有区别，fgets 遇到空格不结束*
 
 + 函数定义：
 
-    + **int putc(int c, FILE \*fp)**
+    + **int fscanf(FILE \*fp, char \*format, [argument])**
 
 + 其中：
 
-    + **c：** 将要写入的字符量
+    + **fp：** 指向 FILE 对象的指针，该 FILE 对象标识了流
 
-    + **fp：**　指向 FILE 对象的指针，将要写入的文件流
+    + **format：** 字符串，包含了要被写入到流 fp 中的文本。它可以包含嵌入的 format 标签，format 标签可被随后的附加参数中指定的值替换，并按需求进行格式化
 
-    + **返回值：** 在正常调用情况下，函数返回写入文件的字符的 ASCII 码值，出错时，返回EOF(-1)
+    + **[argument]：** 附加参数列表
+
+    + **返回值：** 如果成功，该函数返回成功匹配和赋值的个数；如果到达文件末尾或发生读错误，则返回 EOF
 
 ### 💬 sscanf 函数
 
-+ 函数名：**[puts]](#welcome)**
++ 函数名：**[sscanf](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
-+ 功能：*把 参数 char 指定的（一个无字符）字符写入到标准输出 stdout 中*
++ 功能：*将 format 格式化的数据输入到 str 所指向的字符串*
 
 + 函数定义：
 
-    + **int putchar(int char)**
+    + **int sscanf(const char \*str, const char \*format, [argument])**
 
 + 其中：
 
-    + **char：** 将要被写入的字符，该字符以其对应的 int 值进行传递
+    + **str：** 指向一个字符数组的指针，存储了 C 字符串
 
-    + **返回值：** 输出成功，则以无符号 char 强制转换为 int 的形式返回写入的字符；否则返回 EOF(End of file) 文件结束符
+    + **format：** 字符串，包含了要被写入到字符串 str 的文本。它可以包含嵌入的 format 标签，format 标签可被随后的附加参数中指定的值替换，并按需求进行格式化
+
+    + **[argument]：** 附加参数列表
+
+    + **返回值：** 如果成功，该函数返回成功匹配和赋值的个数；如果到达文件末尾或发生读错误，则返回 EOF
 
 <div align="right">
     <a href="#-文件的访问之-ansi-c库函数-">返回目录 ⬆</a>
