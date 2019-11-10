@@ -102,7 +102,7 @@
 
 ### 💬 fgetc 函数
 
-+ 函数名：**[fgetc]](#welcome)**
++ 函数名：**[fgetc](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
@@ -120,7 +120,7 @@
 
 ### 💬 getc 函数
 
-+ 函数名：**[getc]](#welcome)**
++ 函数名：**[getc](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
@@ -138,7 +138,7 @@
 
 ### 💬 getchar 函数
 
-+ 函数名：**[fgetc]](#welcome)**
++ 函数名：**[fgetc](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
@@ -158,7 +158,7 @@
 
 ### 💬 fputc 函数
 
-+ 函数名：**[fputc]](#welcome)**
++ 函数名：**[fputc](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
@@ -178,7 +178,7 @@
 
 ### 💬 putc 函数
 
-+ 函数名：**[putc]](#welcome)**
++ 函数名：**[putc](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
@@ -198,7 +198,7 @@
 
 ### 💬 putchar 函数
 
-+ 函数名：**[putchar]](#welcome)**
++ 函数名：**[putchar](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
@@ -220,7 +220,7 @@
 
 ### 💬 fgets 函数
 
-+ 函数名：**[fgets]](#welcome)**
++ 函数名：**[fgets](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
@@ -242,7 +242,7 @@
 
 ### 💬 gets 函数
 
-+ 函数名：**[gets]](#welcome)**
++ 函数名：**[gets](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
@@ -264,7 +264,7 @@
 
 ### 💬 fputs 函数
 
-+ 函数名：**[fputs]](#welcome)**
++ 函数名：**[fputs](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
@@ -284,7 +284,7 @@
 
 ### 💬 puts 函数
 
-+ 函数名：**[puts]](#welcome)**
++ 函数名：**[puts](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
@@ -306,7 +306,7 @@
 
 ### 💬 fread 函数
 
-+ 函数名：**[fread]](#welcome)**
++ 函数名：**[fread](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
@@ -336,7 +336,7 @@
 
 ### 💬 fwrite 函数
 
-+ 函数名：**[fwrite]](#welcome)**
++ 函数名：**[fwrite](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
@@ -364,7 +364,7 @@
 
 ### 💬 feof 函数
 
-+ 函数名：**[feof]]]](#welcome)**
++ 函数名：**[feof](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
