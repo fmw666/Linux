@@ -382,21 +382,27 @@
 
 ### 💬 ferror 函数
 
-+ 函数名：**[puts]](#welcome)**
++ 函数名：**[ferror](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
-+ 功能：*把 参数 char 指定的（一个无字符）字符写入到标准输出 stdout 中*
++ 功能：*在调用各种输入输出函数（如 putc、getc、fread、fwrite 等）时，如果出现错误，除了函数返回值有所反映外，还可以用 ferror 函数检查*
 
 + 函数定义：
 
-    + **int putchar(int char)**
+    + **int ferror(FILE \*fp)**
 
 + 其中：
 
-    + **char：** 将要被写入的字符，该字符以其对应的 int 值进行传递
+    + **fp：** 指向 FILE 对象的指针，将要被检测的文件流
 
-    + **返回值：** 输出成功，则以无符号 char 强制转换为 int 的形式返回写入的字符；否则返回 EOF(End of file) 文件结束符
+    + **返回值：** 
+
+        + 如果 ferror 返回值为 0（假），表示未出错；如果返回一个非零值，表示出错
+
+        + 应该注意，对同一个文件 每一次调用输入输出函数，均产生一个新的 ferror 函数值，因此，应当在调用一个输入输出函数后立即检查 ferror 函数的值，否则信息会丢失
+
+        + 在执行 fopen 函数时，ferror 函数的初始值自动置为 0
 
 <div align="right">
     <a href="#-文件的访问之-ansi-c库函数-">返回目录 ⬆</a>
@@ -404,41 +410,49 @@
 
 ### 💬 fseek 函数
 
-+ 函数名：**[fputs]](#welcome)**
++ 函数名：**[fseek](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
-+ 功能：*向文件流 fp 中写入字符 c，与 fputc 等价*
++ 功能：*重定位流(数据流/文件) fp 上的文件内部位置指针，指向以 fromwhere 为基准，偏移 offset（指针偏移量）个字节的位置*
 
 + 函数定义：
 
-    + **int putc(int c, FILE \*fp)**
+    + **int fseek(FILE \*fp, long offset, int fromwhere)**
 
 + 其中：
-
-    + **c：** 将要写入的字符量
 
     + **fp：**　指向 FILE 对象的指针，将要写入的文件流
 
-    + **返回值：** 在正常调用情况下，函数返回写入文件的字符的 ASCII 码值，出错时，返回EOF(-1)
+    + **offset：** 这是相对 fromwhere 的偏移量，以字节为单位
+
+    + **fromwhere：** 这是表示开始添加偏移 offset 的位置。它一般指定为下列常量之一
+
+        + [SEEK_SET](#welcome) 表示文件的开头
+
+        + [SEEK_CUR](#welcome) 表示文件指针的当前位置
+
+        + [SEEK_END](#welcome) 表示文件的末尾
+
+    + **返回值：** 如果执行成功，函数返回 0；如果执行失败（比如 offset 取值大于等于 2\*1024\*1024\*1024，即 long 的正数范围 2G)，则不改变 fp 指向的位置，函数返回一个非 0 值
 
 ### 💬 ftell 函数
 
-+ 函数名：**[puts]](#welcome)**
++ 函数名：**[ftell](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
-+ 功能：*把 参数 char 指定的（一个无字符）字符写入到标准输出 stdout 中*
++ 功能：*用于得到文件位置指针当前位置相对于文件首的偏移字节数。使用 fseek 函数后再调用函数 ftell() 就能非常容易地确定文件的当前位置。因为 ftell 返回 long 型，根据 long 型的取值范围-2<sup>31</sup>~2<sup>31</sup>-1（-2147483648～2147483647），故对大于 2.1G 的文件进行操作时出错*
 
 + 函数定义：
 
-    + **int putchar(int char)**
+    + **long ftell(FILE \*fp)**
 
 + 其中：
 
-    + **char：** 将要被写入的字符，该字符以其对应的 int 值进行传递
+    + **fp：** 指向 FILE 对象的指针，将要读取的文件流
 
-    + **返回值：** 输出成功，则以无符号 char 强制转换为 int 的形式返回写入的字符；否则返回 EOF(End of file) 文件结束符
+    + **返回值：** 该函数返回位置标识符的当前值。如果发生错误，则返回 -1L，全局变量 errno 被设置为一个正值
 
 <div align="right">
     <a href="#-文件的访问之-ansi-c库函数-">返回目录 ⬆</a>
@@ -446,41 +460,51 @@
 
 ### 💬 printf 函数
 
-+ 函数名：**[fputs]](#welcome)**
++ 函数名：**[printf](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
-+ 功能：*向文件流 fp 中写入字符 c，与 fputc 等价*
++ 功能：**
 
 + 函数定义：
 
-    + **int putc(int c, FILE \*fp)**
+    + **int printf(char \*format...)**
+
+    + **printf("<格式化字符串>", <参量表>)**
 
 + 其中：
 
-    + **c：** 将要写入的字符量
+    + **format：** 字符串，包含了要被写入到标准输出 stdout 的文本。它可以包含嵌入的 format 标签，format 标签可被随后的附加参数中指定的值替换，并按需求进行格式化。格式化字符串包含三种对象，分别为
 
-    + **fp：**　指向 FILE 对象的指针，将要写入的文件流
+        + [(1)](#welcome) 字符串常量
 
-    + **返回值：** 在正常调用情况下，函数返回写入文件的字符的 ASCII 码值，出错时，返回EOF(-1)
+        + [(2)](#welcome) 格式控制字符串
+
+        + [(3)](#welcome) 转义字符
+
+    + **返回值：** 如果成功，则返回写入的字符总数；否则返回一个负数
 
 ### 💬 fprintf 函数
 
-+ 函数名：**[puts]](#welcome)**
++ 函数名：**[fprintf](#welcome)**
 
 + 头文件：**[stdio.h](#welcome)**
 
-+ 功能：*把 参数 char 指定的（一个无字符）字符写入到标准输出 stdout 中*
++ 功能：*根据指定的格式 format 字符串来转换并格式化数据，然后将数据 argument 输出到参数 fp 指定的文件中，直到出现字符串结束（'\0'）为止*
 
 + 函数定义：
 
-    + **int putchar(int char)**
+    + **int fprintf(FILE \*fp, const char \*format, [argument])**
 
 + 其中：
 
-    + **char：** 将要被写入的字符，该字符以其对应的 int 值进行传递
+    + **fp：** 指向 FILE 对象的指针，该 FILE 对象标识了流
 
-    + **返回值：** 输出成功，则以无符号 char 强制转换为 int 的形式返回写入的字符；否则返回 EOF(End of file) 文件结束符
+    + **format：** 字符串，包含了要被写入到流 fp 中的文本。它可以包含嵌入的 format 标签，format 标签可被随后的附加参数中指定的值替换，并按需求进行格式化
+
+    + **[argument]：** 附加参数列表
+
+    + **返回值：** 如果成功，则返回写入的字符总数；否则返回一个负数
 
 ### 💬 sprintf 函数
 
