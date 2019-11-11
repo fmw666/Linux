@@ -6,7 +6,7 @@
 
 <br>
 
-&emsp;&emsp;**[GCC（GNU Compiler Collection，GNU 编译器套件）](#welcome)** 是由 GNU 开发的编程语言编译器。
+&emsp;&emsp;**GCC（GNU Compiler Collection，GNU 编译器套件）** 是由 GNU 开发的编程语言编译器。
 
 + **[简介](#-简介)**
 
