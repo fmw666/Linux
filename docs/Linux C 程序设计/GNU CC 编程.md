@@ -8,6 +8,8 @@
 
 &emsp;&emsp;**GCC（GNU Compiler Collection，GNU 编译器套件）** 是由 GNU 开发的编程语言编译器。
 
+<br>
+
 + **[简介](#-简介)**
 
 + **[GCC 所支持的扩展名表](#-gcc-所支持的扩展名表)**
