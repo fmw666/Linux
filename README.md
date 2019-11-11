@@ -46,7 +46,13 @@
 
     + [Shell 函数](docs/Shell%20编程/Shell%20函数.md)
 
-1. **[Linux C 程序设计]()**
+1. **[Linux C 程序设计](docs/Linux%20C%20程序设计)**
+
+    + [GNU CC 编程](docs/Linux%20C%20程序设计/GNU%20CC%20编程.md)
+
+    + [GDB 调试](docs/Linux%20C%20程序设计/GDB%20调试.md)
+
+    + [GNU make](docs/Linux%20C%20程序设计/GNU%20make.md)
 
 1. **[文件处理](docs/文件处理)**
 
