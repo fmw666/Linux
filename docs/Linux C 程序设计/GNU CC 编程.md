@@ -56,7 +56,7 @@ gcc [选项] 源文件 [选项] [目标文件]
 
 ***编译过程分为四个阶段***
 
-+ 预处理（Pre-Processing）
++ **预处理（Pre-Processing）**
 
     ```bash
     $ gcc -E hello.c -o hello.i
@@ -70,7 +70,7 @@ gcc [选项] 源文件 [选项] [目标文件]
 
     + "[hello.i](#welcome)"：预处理过程生成的目标文件
 
-+ 编译（Compiling）
++ **编译（Compiling）**
 
     ```bash
     $ gcc -S hello.i -o hello.S
@@ -84,7 +84,7 @@ gcc [选项] 源文件 [选项] [目标文件]
 
     + "[hello.S](#welcome)"：编译生成的目标文件名
 
-+ 汇编（Assembling）
++ **汇编（Assembling）**
 
     ```bash
     $ gcc -c hello.S -o hello.o
@@ -98,7 +98,7 @@ gcc [选项] 源文件 [选项] [目标文件]
 
     + "[hello.o](#welcome)"：二进制目标代码文件，编译生成的目标文件名
 
-+ 链接（Linking）
++ **链接（Linking）**
 
     + "[hello.i](#welcome)"：预处理过程生成的目标文件
 
