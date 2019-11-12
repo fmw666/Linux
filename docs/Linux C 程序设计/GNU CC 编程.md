@@ -20,7 +20,11 @@
 
 + **[函数库之 动态库](#-函数库之-动态库)**
 
++ **[多个源文件的编译](#-多个源文件的编译)**
+
 + **[GCC 编译选项汇总](#-gcc-编译选项汇总)**
+
++ **[出错检查与警告提示选项](#-出错检查与警告提示选项)**
 
 ### 💬 简介
 
@@ -102,13 +106,179 @@ gcc [选项] 源文件 [选项] [目标文件]
 
 + **链接（Linking）**
 
-    + "[hello.i](#welcome)"：预处理过程生成的目标文件
-
-    + "[hello.i](#welcome)"：预处理过程生成的目标文件
+&emsp;&emsp;在目标文件 hello.o 中没有定义 “printf” 的函数实现，且在预编译中包含进的 “stdio.h” 中也只有该函数的声明，而没有定义函数的实现，系统把这些函数实现都被做到名为 libc.so.6 的库文件中去了，在没有特别指定时，gcc 会到系统默认的搜索路径 “/usr/lib” 下进行查找，也就是链接到 libc.so.6 库函数中去，这样就能实现函数 “printf” 了，而这也就是链接的作用
 
 ### 💬 函数库之 静态库
 
+&emsp;&emsp;编译链接时，把库文件的代码全部加入到可执行文件中，因此生成的文件比较大，但在运行时也就不再需要库文件了。其后缀名一般为：`.a`
+
+<div align="right">
+    <b><i>静态库的创建 ⬇</i></b>
+</div>
+
++ **创建源文件**
+
+    ```c
+    /*
+     * libhello.h
+     */
+    #ifndef _libhello_H_
+    #define _libhello_H_
+    void print_hello(void);
+    #endif
+    ```
+
+    > libhello.h
+
+    ```c
+    /*
+     * libhello.c
+     */
+    #include <stdio.h>
+    void print_hello(void)
+    {
+        printf("hello library\n");
+    }
+    ```
+
+    > libhello.c
+
++ **生成目标文件 libhello.o**
+
+    ```bash
+    $ gcc -c libhello.c -o libhello.o
+    ```
+
++ **使用 `ar` 命令创建静态库 libhello.a**
+
+    ```bash
+    $ ar -rc libhello.a libhello.o
+    ```
+
+<div align="right">
+    <b><i>静态库的使用 ⬇</i></b>
+</div>
+
++ **编辑测试文件**
+
+    ```c
+    /*
+     * usehello.c
+     */
+    #include "libhello.h"
+    
+    int main(void)
+    {
+        print_hello();
+        return 0;
+    }
+    ```
+
++ **生成可执行文件**
+
+    ```bash
+    $ gcc -o usehello usehello.c libhello.a
+    ```
+
++ **运行测试文件**
+
+    ```bash
+    $ ./usehello
+    ```
+
 ### 💬 函数库之 动态库
+
+&emsp;&emsp;编译链接时，没有把库文件的代码加入到可执行文件中，而是在程序执行时运行链接文件加载库，这样可以节省系统的开销。其后缀名一般为：`.so`，如前面 libc.so.6 就是动态库，GCC 在编译时默认使用动态库
+
+<div align="right">
+    <b><i>动态库的创建 ⬇</i></b>
+</div>
+
++ **创建源文件**
+
+    ```c
+    /*
+     * libhello.h
+     */
+    #ifndef _libhello_H_
+    #define _libhello_H_
+    void print_hello(void);
+    #endif
+    ```
+
+    > libhello.h
+
+    ```c
+    /*
+     * libhello.c
+     */
+    #include <stdio.h>
+    void print_hello(void)
+    {
+        printf("hello library\n");
+    }
+    ```
+
+    > libhello.c
+
++ **生成共享库目标文件 libhello.o**
+
+    ```bash
+    $ gcc -fPIC -Wall -g -c libhello.c -o libhello.o
+    ```
+
+    + 编译共享库 libhello.so.1.0
+
+        ```bash
+        $ gcc -g -shared -W1,-soname,libhello.so -o libhello.so.1.0 libhello.o
+        ```
+
+    + 创建共享库的符号连接
+
+        ```bash
+        $ ln -s libhello.so.1.0 libhello.so
+        ```
+
++ **编辑测试文件**
+
+    ```c
+    /*
+     * usehello.c
+     */
+    #include "libhello.h"
+    
+    int main(void)
+    {
+        print_hello();
+        return 0;
+    }
+    ```
+
++ **生成可执行文件**
+
+    ```bash
+    $ gcc -o usehello usehello.c -lhello -L ./
+    ```
+
++ **运行测试文件**
+
+    ```bash
+    $ LD_LIBRARY_PATH=$(pwd) ./usehello
+    ```
+
+### 💬 多个源文件的编译
+
+```bash
+$ gcc foo1.c foo2.c -o foo
+```
+
+&emsp;&emsp;对于源文件不止一个情况，GCC 编译过程仍然按照预处理、编译、汇编和链接的过程依次进行。因此，上面这条命令相当于依次执行如下三条命令：
+
+```bash
+$ gcc -c foo1.c -o foo1.o
+$ gcc -c foo2.c -o foo2.o
+$ gcc foo1.o foo2.o -o foo
+```
 
 ### 💬 GCC 编译选项汇总
 
@@ -156,6 +326,28 @@ gcc [选项] 源文件 [选项] [目标文件]
         ```bash
         $ gcc hello.c -l /root/work/gcc/ -o hello
         ```
+
++ **-L dir 实例**
+
+    + ./hello.c
+
+    + /root/work/gcc/lib/libxch.so
+
+    + 编译命令：
+
+        ```bash
+        $ gcc hello.c -L /root/work/gcc/lib hello
+        ```
+
+### 💬 出错检查与警告提示选项
+
+|选项|作用|
+|-ansi|支持符合 ANSI 标准的 C 程序|
+|-pedantic|允许发出 ANSI C 标准所列的全部警告信息|
+|-pedantic-error|允许发出 ANSI C 标准所列的全部错误信息|
+|-w|关闭所有告警|
+|-Wall|允许发出 GCC 提供的所有有用的告警信息|
+|-werror|把所有的告警信息转化为错误信息，并终止编译过程|
 
 <div align="center">
     - End -
