@@ -239,6 +239,10 @@ gcc [选项] 源文件 [选项] [目标文件]
         $ ln -s libhello.so.1.0 libhello.so
         ```
 
+<div align="right">
+    <b><i>动态库的使用 ⬇</i></b>
+</div>
+
 + **编辑测试文件**
 
     ```c
@@ -268,17 +272,17 @@ gcc [选项] 源文件 [选项] [目标文件]
 
 ### 💬 多个源文件的编译
 
-```bash
-$ gcc foo1.c foo2.c -o foo
-```
+    ```
+    $ gcc foo1.c foo2.c -o foo
+    ```
 
 &emsp;&emsp;对于源文件不止一个情况，GCC 编译过程仍然按照预处理、编译、汇编和链接的过程依次进行。因此，上面这条命令相当于依次执行如下三条命令：
 
-```bash
-$ gcc -c foo1.c -o foo1.o
-$ gcc -c foo2.c -o foo2.o
-$ gcc foo1.o foo2.o -o foo
-```
+    ```bash
+    $ gcc -c foo1.c -o foo1.o
+    $ gcc -c foo2.c -o foo2.o
+    $ gcc foo1.o foo2.o -o foo
+    ```
 
 ### 💬 GCC 编译选项汇总
 
