@@ -1,7 +1,7 @@
 # 「 Linux 」
 
 <div align="right">
-    <a href="">Linux 内核分析及应用 ➡</a>
+    <a href="kernal内核">Linux 内核分析及应用 ➡</a>
 </div>
 
 > **💡 Linux 操作系统指导手册**
