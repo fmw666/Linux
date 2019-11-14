@@ -2,7 +2,7 @@
 
 <br>
 <div align="center">
-    <img src="show.jpg" height="400">
+    <img src="show.png" height="400">
 </div>
 
 + **代码的下载**
@@ -19,9 +19,13 @@
     $ gcc main.c -o main && ./main
     ```
 
+<br>
+
 + **特别说明**
 
-    >
+    > 学号最大 12 位，姓名最大 10 位，性别 1 位（0 代表女，1 代表男），电话最大 12 位
+
+<br>
 
 + **作者联系方式**
 
