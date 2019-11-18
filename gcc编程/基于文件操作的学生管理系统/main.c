@@ -524,5 +524,5 @@ int main()
 		menu_call(choose);
 	}
 
-    return 0;
+	return 0;
 }
