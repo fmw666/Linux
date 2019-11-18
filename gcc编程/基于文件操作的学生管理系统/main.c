@@ -516,7 +516,7 @@ int main()
 		system("reset");
 		// 菜单调用
 		menu();
-		
+
 		// 输入检查
 		choose = input_check(choose);
 		
